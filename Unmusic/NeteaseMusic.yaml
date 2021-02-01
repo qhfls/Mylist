@@ -1,0 +1,26 @@
+# URL:     https://raw.githubusercontent.com/qhfls/Rules-for-UnblockNeteaseMusic/master/Clash/Proxy/NeteaseMusic.yaml
+# CDN:     https://cdn.jsdelivr.net/gh/qhfls/Rules-for-UnblockNeteaseMusic/Clash/Proxy/NeteaseMusic.yaml
+# Project: https://github.com/qhfls/Rules-for-UnblockNeteaseMusic
+
+
+proxies:
+  - name: UnMusicDesperadoJ
+    type: ss
+    server: music.desperadoj.com
+    port: 30001
+    cipher: aes-128-gcm
+    password: desperadoj.com_free_proxy_emx2
+
+  - name: UnMusicHTTP1
+    type: http
+    server: os.dlj.tf
+    port: 20000
+    username: none
+    password: none
+
+  - name: UnMusicHTTP2
+    type: http
+    server: pc.dlj.tf
+    port: 30000
+    username: none
+    password: none
