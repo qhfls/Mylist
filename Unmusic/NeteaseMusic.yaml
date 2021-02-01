@@ -1,7 +1,5 @@
-# URL:     https://raw.githubusercontent.com/qhfls/Rules-for-UnblockNeteaseMusic/master/Clash/Proxy/NeteaseMusic.yaml
-# CDN:     https://cdn.jsdelivr.net/gh/qhfls/Rules-for-UnblockNeteaseMusic/Clash/Proxy/NeteaseMusic.yaml
-# Project: https://github.com/qhfls/Rules-for-UnblockNeteaseMusic
-
+# URL:     https://raw.githubusercontent.com/qhfls/Mylist/master/Unmusic/NeteaseMusic.yaml
+# CDN:     https://cdn.jsdelivr.net/gh/qhfls/Mylist/Unmusic/NeteaseMusic.yaml
 
 proxies:
   - name: UnMusicDesperadoJ
