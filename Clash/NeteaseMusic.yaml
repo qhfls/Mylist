@@ -4,7 +4,7 @@
 #          本代理完全免费，如遇收费请投诉举报卖家
 
 proxies:
-  - name: 🎶 网易解锁
+  - name: 🎶 网易
     type: ss
     server: music.desperadoj.com
     port: 30001
