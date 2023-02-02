@@ -1,10 +1,15 @@
+;DeepL
 DOMAIN-SUFFIX,deepl.com
+;划词翻译
 DOMAIN,hs-api.limingkai.cn
+;uneasy RSS
 DOMAIN,ttr.uneasy.win
+;XFSS
 DOMAIN,dingyue.xftld.xyz
 DOMAIN,xfltd.top
 DOMAIN,xftld.org
 DOMAIN,dy.xftld.xyz
+;MDCx
 DOMAIN-SUFFIX,jdbstatic.com
 DOMAIN-SUFFIX,hdouban.com
 DOMAIN-SUFFIX,iqqtv.net
