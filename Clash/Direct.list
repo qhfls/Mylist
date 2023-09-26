@@ -7,10 +7,10 @@ DOMAIN,hs-api.limingkai.cn
 ;uneasy RSS
 DOMAIN,ttr.uneasy.win
 ;XFSS
-DOMAIN,dingyue.xftld.xyz
-DOMAIN,xfltd.top
-DOMAIN,xftld.org
-DOMAIN,dy.xftld.xyz
+;DOMAIN,dingyue.xftld.xyz
+;DOMAIN,xfltd.top
+;DOMAIN,xftld.org
+;DOMAIN,dy.xftld.xyz
 ;MDCx
 DOMAIN-SUFFIX,hdouban.com
 DOMAIN-SUFFIX,iqqtv.net
