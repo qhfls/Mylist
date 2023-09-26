@@ -1,7 +1,7 @@
 ;Pocket
 DOMAIN-SUFFIX,getpocket.com
 ;DeepL
-DOMAIN-SUFFIX,deepl.com
+;DOMAIN-SUFFIX,deepl.com
 ;划词翻译
 DOMAIN,hs-api.limingkai.cn
 ;uneasy RSS
