@@ -1,4 +1,4 @@
-DOMAIN,pikpak.deta.dev
-DOMAIN-SUFFIX,mypikpak.com
+;DOMAIN,pikpak.deta.dev
 DOMAIN-KEYWORD,pikpak
+;DOMAIN-SUFFIX,mypikpak.com
 ;IP-CIDR,119.13.105.238/32,no-resolve
