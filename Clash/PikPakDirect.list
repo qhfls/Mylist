@@ -1,6 +1,7 @@
-DOMAIN-KEYWORD,dl-a10b-,
-DOMAIN-KEYWORD,pikpak
-;
-;DOMAIN,pikpak.deta.dev
-;DOMAIN-SUFFIX,mypikpak.com
-;IP-CIDR,119.13.105.238/32,no-resolve
+DOMAIN-SUFFIX,dlandroid.rcv.sandai.net
+DOMAIN-SUFFIX,hub5idx.v6.shub.sandai.net
+DOMAIN-SUFFIX,hub5pn.wap.sandai.net
+DOMAIN-SUFFIX,hub5pnc.sandai.net
+DOMAIN-SUFFIX,hub5pr.v6.phub.sandai.net
+DOMAIN-SUFFIX,hubciddata.sandai.net
+DOMAIN-KEYWORD,mypikpak
