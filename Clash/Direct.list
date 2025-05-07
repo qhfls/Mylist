@@ -1,3 +1,5 @@
+;所有IPv6流量
+IP-CIDR6,::/0
 ;DeepL
 ;DOMAIN-SUFFIX,deepl.com
 ;划词翻译
