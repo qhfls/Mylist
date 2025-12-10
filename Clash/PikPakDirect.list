@@ -4,6 +4,7 @@ DOMAIN-SUFFIX,hub5pn.wap.sandai.net
 DOMAIN-SUFFIX,hub5pnc.sandai.net
 DOMAIN-SUFFIX,hub5pr.v6.phub.sandai.net
 DOMAIN-SUFFIX,hubciddata.sandai.net
-;DOMAIN-SUFFIX,pickpackapp.com
+DOMAIN,hub5pn.mypikpak.com
+DOMAIN,sg-thumbnail-drive.mypikpak.com
 DOMAIN-KEYWORD,pikpak
 DOMAIN-KEYWORD,pickpackapp
