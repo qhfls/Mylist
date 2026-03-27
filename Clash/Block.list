@@ -1,4 +1,5 @@
-#Android
-DOMAIN,api.liquidlink.cn
-DOMAIN,requality.android.shouji.sogou.com
+# --- 针对RedmiK60日志修改 ---
 DOMAIN,miwifi.com
+# --- 针对Mate20日志修改 ---
+DOMAIN,offline.aps.amap.com  
+# --- 针对KF-PC日志修改 ---  
