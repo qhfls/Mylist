@@ -1,5 +1,6 @@
 # --- 针对RedmiK60日志修改 ---
 DOMAIN,miwifi.com
+DOMAIN,api.liquidlink.cn
 # --- 针对Mate20日志修改 ---
 DOMAIN,offline.aps.amap.com  
 # --- 针对KF-PC日志修改 ---  
