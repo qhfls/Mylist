@@ -1,8 +1,6 @@
-;Pocket
-;DOMAIN-SUFFIX,getpocket.com
-;BTdig
+#BTdig
 DOMAIN-SUFFIX,btdig.com
-;MDCx
+#MDCx
 DOMAIN-SUFFIX,javbus.com
 DOMAIN-SUFFIX,jav321.com
 DOMAIN-SUFFIX,javlibrary.com
