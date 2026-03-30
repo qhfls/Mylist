@@ -6,5 +6,5 @@ DOMAIN,requality.android.shouji.sogou.com
 #DOMAIN,route-stats.d.meituan.net
 #DOMAIN,met-cronet-reporter.d.meituan.net
 # --- 针对Mate20日志修改 ---
-#DOMAIN,offline.aps.amap.com  
+DOMAIN,offline.aps.amap.com  
 # --- 针对KF-PC日志修改 ---  
