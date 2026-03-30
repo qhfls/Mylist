@@ -1,7 +1,7 @@
 # --- 针对RedmiK60日志修改 ---
-#DOMAIN,miwifi.com
-#DOMAIN,api.liquidlink.cn
-#DOMAIN,requality.android.shouji.sogou.com
+DOMAIN,miwifi.com
+DOMAIN,api.liquidlink.cn
+DOMAIN,requality.android.shouji.sogou.com
 #DOMAIN,maplocatesdksnapshot.d.meituan.net
 #DOMAIN,route-stats.d.meituan.net
 #DOMAIN,met-cronet-reporter.d.meituan.net
