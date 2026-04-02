@@ -1,3 +1,11 @@
+DOMAIN-SUFFIX,sandai.net
+DOMAIN-SUFFIX,mypikpak.com
+DOMAIN-SUFFIX,mypikpak.net
+DOMAIN-SUFFIX,pikpak.me
+DOMAIN-SUFFIX,pikpakdrive.com
+DOMAIN-SUFFIX,pickpackapp.com
+DOMAIN-SUFFIX,pikpak.io
+#
 #DOMAIN-SUFFIX,dlandroid.rcv.sandai.net
 #DOMAIN-SUFFIX,hub5idx.v6.shub.sandai.net
 #DOMAIN-SUFFIX,hub5pn.wap.sandai.net
@@ -12,11 +20,3 @@
 #DOMAIN,hub5pn.mypikpak.net
 #DOMAIN,hub5pn.pikpak.me
 #DOMAIN,hub5pn.pikpakdrive.com
-#
-DOMAIN-SUFFIX,sandai.net
-DOMAIN-SUFFIX,mypikpak.com
-DOMAIN-SUFFIX,mypikpak.net
-DOMAIN-SUFFIX,pikpak.me
-DOMAIN-SUFFIX,pikpakdrive.com
-DOMAIN-SUFFIX,pickpackapp.com
-DOMAIN-SUFFIX,pikpak.io
