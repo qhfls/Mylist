@@ -140,6 +140,8 @@ dns:
   - www.bilibili.com
   - api.bilibili.com
   - a.w.bilicdn1.com
+  - resolver.msg.xiaomi.net
+  - dns.weixin.qq.com.cn
   - maplocatesdksnapshot.d.meituan.net
   - met-cronet-reporter.d.meituan.net
   - appcloud.zhihu.com
