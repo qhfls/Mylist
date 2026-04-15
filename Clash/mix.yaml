@@ -24,8 +24,8 @@ sniffer:
       ports: [443]
       override-destination: true
   skip-domain:
-    - Mijia Cloud
-    - dlg.io.mi.com
+  - Mijia Cloud
+  - dlg.io.mi.com
   force-domain: ~
 dns:
   enable: true
@@ -37,116 +37,116 @@ dns:
   use-hosts: true
   use-system-hosts: false
   default-nameserver:
-    - 119.29.29.29
-    - 223.5.5.5
+  - 119.29.29.29
+  - 223.5.5.5
   nameserver:
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
-    - tls://dns.alidns.com:853
-    - tls://dot.pub:853
+  - https://dns.alidns.com/dns-query
+  - https://doh.pub/dns-query
+  - tls://dns.alidns.com:853
+  - tls://dot.pub:853
   fallback:
-    - https://wrecking7857.com:44443/dns-query/a0994d53-f963-4279-a10b-2dff35d78dcf
-    - https://carrousel6917.com:44443/dns-query/a0994d53-f963-4279-a10b-2dff35d78dcf
-    - https://simmering3378.com:443/dns-query/a0994d53-f963-4279-a10b-2dff35d78dcf
+  - https://wrecking7857.com:44443/dns-query/a0994d53-f963-4279-a10b-2dff35d78dcf
+  - https://carrousel6917.com:44443/dns-query/a0994d53-f963-4279-a10b-2dff35d78dcf
+  - https://simmering3378.com:443/dns-query/a0994d53-f963-4279-a10b-2dff35d78dcf
   fallback-filter:
     geoip: true
     geoip-code: CN
     ipcidr:
-      - 240.0.0.0/4
-      - 0.0.0.0/32
+    - 240.0.0.0/4
+    - 0.0.0.0/32
     domain:
-      - +.google.com
-      - +.facebook.com
-      - +.youtube.com
-      - +.github.com
-      - +.googlevideo.com
+    - +.google.com
+    - +.facebook.com
+    - +.youtube.com
+    - +.github.com
+    - +.googlevideo.com
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
-    - "*.lan"
-    - "*.localdomain"
-    - "*.example"
-    - "*.invalid"
-    - "*.localhost"
-    - "*.test"
-    - "*.local"
-    - "*.home.arpa"
-    - time.*.com
-    - time.*.gov
-    - time.*.edu.cn
-    - time.*.apple.com
-    - time1.*.com
-    - time2.*.com
-    - time3.*.com
-    - time4.*.com
-    - time5.*.com
-    - time6.*.com
-    - time7.*.com
-    - ntp.*.com
-    - ntp1.*.com
-    - ntp2.*.com
-    - ntp3.*.com
-    - ntp4.*.com
-    - ntp5.*.com
-    - ntp6.*.com
-    - ntp7.*.com
-    - "*.time.edu.cn"
-    - "*.ntp.org.cn"
-    - +.pool.ntp.org
-    - time1.cloud.tencent.com
-    - stun.*.*
-    - stun.*.*.*
-    - swscan.apple.com
-    - mesu.apple.com
-    - music.163.com
-    - "*.music.163.com"
-    - "*.126.net"
-    - musicapi.taihe.com
-    - music.taihe.com
-    - songsearch.kugou.com
-    - trackercdn.kugou.com
-    - "*.kuwo.cn"
-    - api-jooxtt.sanook.com
-    - api.joox.com
-    - y.qq.com
-    - "*.y.qq.com"
-    - streamoc.music.tc.qq.com
-    - mobileoc.music.tc.qq.com
-    - isure.stream.qqmusic.qq.com
-    - dl.stream.qqmusic.qq.com
-    - aqqmusic.tc.qq.com
-    - amobile.music.tc.qq.com
-    - localhost.ptlogin2.qq.com
-    - "*.msftconnecttest.com"
-    - "*.msftncsi.com"
-    - "*.xiami.com"
-    - "*.music.migu.cn"
-    - music.migu.cn
-    - +.wotgame.cn
-    - +.wggames.cn
-    - +.wowsgame.cn
-    - +.wargaming.net
-    - "*.*.*.srv.nintendo.net"
-    - "*.*.stun.playstation.net"
-    - xbox.*.*.microsoft.com
-    - "*.*.xboxlive.com"
-    - "*.ipv6.microsoft.com"
-    - teredo.*.*.*
-    - teredo.*.*
-    - speedtest.cros.wr.pvp.net
-    - +.jjvip8.com
-    - www.douyu.com
-    - activityapi.huya.com
-    - activityapi.huya.com.w.cdngslb.com
-    - www.bilibili.com
-    - api.bilibili.com
-    - a.w.bilicdn1.com
-    - maplocatesdksnapshot.d.meituan.net
-    - met-cronet-reporter.d.meituan.net
-    - appcloud.zhihu.com
-    - appcloud2.in.zhihu.com
-    - umengacs.m.taobao.com
-    - +.dbankcloud.cn
-    - st.pinyin.sogou.com
+  - "*.lan"
+  - "*.localdomain"
+  - "*.example"
+  - "*.invalid"
+  - "*.localhost"
+  - "*.test"
+  - "*.local"
+  - "*.home.arpa"
+  - time.*.com
+  - time.*.gov
+  - time.*.edu.cn
+  - time.*.apple.com
+  - time1.*.com
+  - time2.*.com
+  - time3.*.com
+  - time4.*.com
+  - time5.*.com
+  - time6.*.com
+  - time7.*.com
+  - ntp.*.com
+  - ntp1.*.com
+  - ntp2.*.com
+  - ntp3.*.com
+  - ntp4.*.com
+  - ntp5.*.com
+  - ntp6.*.com
+  - ntp7.*.com
+  - "*.time.edu.cn"
+  - "*.ntp.org.cn"
+  - +.pool.ntp.org
+  - time1.cloud.tencent.com
+  - stun.*.*
+  - stun.*.*.*
+  - swscan.apple.com
+  - mesu.apple.com
+  - music.163.com
+  - "*.music.163.com"
+  - "*.126.net"
+  - musicapi.taihe.com
+  - music.taihe.com
+  - songsearch.kugou.com
+  - trackercdn.kugou.com
+  - "*.kuwo.cn"
+  - api-jooxtt.sanook.com
+  - api.joox.com
+  - y.qq.com
+  - "*.y.qq.com"
+  - streamoc.music.tc.qq.com
+  - mobileoc.music.tc.qq.com
+  - isure.stream.qqmusic.qq.com
+  - dl.stream.qqmusic.qq.com
+  - aqqmusic.tc.qq.com
+  - amobile.music.tc.qq.com
+  - localhost.ptlogin2.qq.com
+  - "*.msftconnecttest.com"
+  - "*.msftncsi.com"
+  - "*.xiami.com"
+  - "*.music.migu.cn"
+  - music.migu.cn
+  - +.wotgame.cn
+  - +.wggames.cn
+  - +.wowsgame.cn
+  - +.wargaming.net
+  - "*.*.*.srv.nintendo.net"
+  - "*.*.stun.playstation.net"
+  - xbox.*.*.microsoft.com
+  - "*.*.xboxlive.com"
+  - "*.ipv6.microsoft.com"
+  - teredo.*.*.*
+  - teredo.*.*
+  - speedtest.cros.wr.pvp.net
+  - +.jjvip8.com
+  - www.douyu.com
+  - activityapi.huya.com
+  - activityapi.huya.com.w.cdngslb.com
+  - www.bilibili.com
+  - api.bilibili.com
+  - a.w.bilicdn1.com
+  - maplocatesdksnapshot.d.meituan.net
+  - met-cronet-reporter.d.meituan.net
+  - appcloud.zhihu.com
+  - appcloud2.in.zhihu.com
+  - umengacs.m.taobao.com
+  - +.dbankcloud.cn
+  - st.pinyin.sogou.com
 proxies:
   - {name: 🇭🇰 香港 01, server: fe0a4e9.jgalxonu.sbs, port: 19300, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
   - {name: 🇭🇰 香港 02, server: fe0a4e9.jgalxonu.sbs, port: 19305, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
@@ -240,304 +240,304 @@ proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
-      - 🇭🇰 香港节点
-      - 🇺🇲 美国节点
-      - 🇯🇵 日本节点
-      - 🇹🇼 台湾节点
-      - 🇸🇬 狮城节点
-      - 🇦 AmyTelecom
-      - 🇱 良心云
-      - DIRECT
+    - 🇭🇰 香港节点
+    - 🇺🇲 美国节点
+    - 🇯🇵 日本节点
+    - 🇹🇼 台湾节点
+    - 🇸🇬 狮城节点
+    - 🇦 AmyTelecom
+    - 🇱 良心云
+    - DIRECT
   - name: 🌍 国外媒体
     type: select
     proxies:
-      - 🇭🇰 香港节点
-      - 🇺🇲 美国节点
-      - 🇯🇵 日本节点
-      - 🇹🇼 台湾节点
-      - 🇸🇬 狮城节点
-      - 🚀 节点选择
-      - DIRECT
+    - 🇭🇰 香港节点
+    - 🇺🇲 美国节点
+    - 🇯🇵 日本节点
+    - 🇹🇼 台湾节点
+    - 🇸🇬 狮城节点
+    - 🚀 节点选择
+    - DIRECT
   - name: 🤖 AI
     type: select
     proxies:
-      - 🇭🇰 香港节点
-      - 🇺🇲 美国节点
-      - 🇯🇵 日本节点
-      - 🇹🇼 台湾节点
-      - 🇸🇬 狮城节点
-      - 🚀 节点选择
-      - DIRECT
+    - 🇭🇰 香港节点
+    - 🇺🇲 美国节点
+    - 🇯🇵 日本节点
+    - 🇹🇼 台湾节点
+    - 🇸🇬 狮城节点
+    - 🚀 节点选择
+    - DIRECT
   - name: 📲 Telegram
     type: select
     proxies:
-      - 🇭🇰 香港节点
-      - 🇺🇲 美国节点
-      - 🇯🇵 日本节点
-      - 🇹🇼 台湾节点
-      - 🇸🇬 狮城节点
-      - 🚀 节点选择
-      - DIRECT
+    - 🇭🇰 香港节点
+    - 🇺🇲 美国节点
+    - 🇯🇵 日本节点
+    - 🇹🇼 台湾节点
+    - 🇸🇬 狮城节点
+    - 🚀 节点选择
+    - DIRECT
   - name: 🔞 JavDB
     type: select
     proxies:
-      - 🇭🇰 香港节点
-      - 🇺🇲 美国节点
-      - 🇯🇵 日本节点
-      - 🇹🇼 台湾节点
-      - 🇸🇬 狮城节点
-      - 🚀 节点选择
-      - DIRECT
+    - 🇭🇰 香港节点
+    - 🇺🇲 美国节点
+    - 🇯🇵 日本节点
+    - 🇹🇼 台湾节点
+    - 🇸🇬 狮城节点
+    - 🚀 节点选择
+    - DIRECT
   - name: 🎞️ PikPak
     type: select
     proxies:
-      - DIRECT
-      - 🇭🇰 香港节点
-      - 🇺🇲 美国节点
-      - 🇯🇵 日本节点
-      - 🇹🇼 台湾节点
-      - 🇸🇬 狮城节点
-      - 🚀 节点选择
+    - DIRECT
+    - 🇭🇰 香港节点
+    - 🇺🇲 美国节点
+    - 🇯🇵 日本节点
+    - 🇹🇼 台湾节点
+    - 🇸🇬 狮城节点
+    - 🚀 节点选择
   - name: 🍎 苹果服务
     type: select
     proxies:
-      - DIRECT
-      - 🇭🇰 香港节点
-      - 🇺🇲 美国节点
-      - 🇯🇵 日本节点
-      - 🇹🇼 台湾节点
-      - 🇸🇬 狮城节点
-      - 🚀 节点选择
+    - DIRECT
+    - 🇭🇰 香港节点
+    - 🇺🇲 美国节点
+    - 🇯🇵 日本节点
+    - 🇹🇼 台湾节点
+    - 🇸🇬 狮城节点
+    - 🚀 节点选择
   - name: 🎯 全球直连
     type: select
     proxies:
-      - DIRECT
-      - 🚀 节点选择
+    - DIRECT
+    - 🚀 节点选择
   - name: 🛑 广告拦截
     type: select
     proxies:
-      - REJECT
-      - DIRECT
+    - REJECT
+    - DIRECT
   - name: 🍃 应用净化
     type: select
     proxies:
-      - REJECT
-      - DIRECT
+    - REJECT
+    - DIRECT
   - name: 🐟 漏网之鱼
     type: select
     proxies:
-      - 🚀 节点选择
-      - DIRECT
-      - 🇭🇰 香港节点
-      - 🇺🇲 美国节点
-      - 🇯🇵 日本节点
-      - 🇹🇼 台湾节点
-      - 🇸🇬 狮城节点
+    - 🚀 节点选择
+    - DIRECT
+    - 🇭🇰 香港节点
+    - 🇺🇲 美国节点
+    - 🇯🇵 日本节点
+    - 🇹🇼 台湾节点
+    - 🇸🇬 狮城节点
   - name: 🇭🇰 香港节点
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 🇭🇰 香港 01
-      - 🇭🇰 香港 02
-      - 🇭🇰 香港 03
-      - 🇭🇰 香港 04
-      - 🇭🇰 香港 05
-      - 🇭🇰 香港 06
-      - 🇭🇰 香港 07
-      - 🇭🇰 香港 08
-      - 🇭🇰 香港 09
-      - 🇭🇰 香港 10
-      - 🇭🇰 香港 11
-      - 🇭🇰 香港 12
-      - 🇭🇰 香港 13
-      - 🇭🇰 香港 14
-      - 🇭🇰 香港 15
-      - 🇭🇰 香港 16
-      - 🇭🇰 香港 17
-      - 🇭🇰 香港 18
-      - 🇭🇰 香港 19
-      - 🇭🇰 香港 20
-      - 🇭🇰 香港 21
-      - 🇭🇰 香港高速01|BGP|流媒体
-      - 🇭🇰 香港高速02|BGP|流媒体
-      - 🇭🇰 香港高速03|BGP|流媒体
-      - 🇭🇰 香港高速04|BGP|流媒体
-      - 🇭🇰 香港专线01|BGP|流媒体
-      - 🇭🇰 香港专线02|BGP|流媒体
-      - 🇭🇰 香港专线03|BGP|流媒体
+    - 🇭🇰 香港 01
+    - 🇭🇰 香港 02
+    - 🇭🇰 香港 03
+    - 🇭🇰 香港 04
+    - 🇭🇰 香港 05
+    - 🇭🇰 香港 06
+    - 🇭🇰 香港 07
+    - 🇭🇰 香港 08
+    - 🇭🇰 香港 09
+    - 🇭🇰 香港 10
+    - 🇭🇰 香港 11
+    - 🇭🇰 香港 12
+    - 🇭🇰 香港 13
+    - 🇭🇰 香港 14
+    - 🇭🇰 香港 15
+    - 🇭🇰 香港 16
+    - 🇭🇰 香港 17
+    - 🇭🇰 香港 18
+    - 🇭🇰 香港 19
+    - 🇭🇰 香港 20
+    - 🇭🇰 香港 21
+    - 🇭🇰 香港高速01|BGP|流媒体
+    - 🇭🇰 香港高速02|BGP|流媒体
+    - 🇭🇰 香港高速03|BGP|流媒体
+    - 🇭🇰 香港高速04|BGP|流媒体
+    - 🇭🇰 香港专线01|BGP|流媒体
+    - 🇭🇰 香港专线02|BGP|流媒体
+    - 🇭🇰 香港专线03|BGP|流媒体
   - name: 🇺🇲 美国节点
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 🇺🇸 美国 01
-      - 🇺🇸 美国 02
-      - 🇺🇸 美国 03
-      - 🇺🇸 美国 04
-      - 🇺🇸 美国 05
-      - 🇺🇸 美国 06
-      - 🇺🇸 美国 07
-      - 🇺🇸 美国 08
-      - 🇺🇸 美国 09
-      - 🇺🇸 美国 10
-      - 🇺🇸 美国 11
-      - 🇺🇸 美国 12
-      - 🇺🇸 美国 13
-      - 🇺🇸 美国高速01|流媒体
-      - 🇺🇸 美国高速03|流媒体
-      - 🇺🇸 美国高速04|流媒体
-      - 🇺🇸 美国01|流媒体
-      - 🇺🇸 美国02|流媒体
+    - 🇺🇸 美国 01
+    - 🇺🇸 美国 02
+    - 🇺🇸 美国 03
+    - 🇺🇸 美国 04
+    - 🇺🇸 美国 05
+    - 🇺🇸 美国 06
+    - 🇺🇸 美国 07
+    - 🇺🇸 美国 08
+    - 🇺🇸 美国 09
+    - 🇺🇸 美国 10
+    - 🇺🇸 美国 11
+    - 🇺🇸 美国 12
+    - 🇺🇸 美国 13
+    - 🇺🇸 美国高速01|流媒体
+    - 🇺🇸 美国高速03|流媒体
+    - 🇺🇸 美国高速04|流媒体
+    - 🇺🇸 美国01|流媒体
+    - 🇺🇸 美国02|流媒体
   - name: 🇹🇼 台湾节点
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 🇹🇼 台湾 01
-      - 🇹🇼 台湾 02
-      - 🇹🇼 台湾 03
-      - 🇹🇼 台湾 04
-      - 🇹🇼 台湾 05
-      - 🇹🇼 台湾 06
-      - 🇹🇼 台湾 07
-      - 🇹🇼 台湾 08
-      - 🇹🇼 台湾 09
-      - 🇹🇼 台湾 10
-      - 🇹🇼 台湾高速01|BGP|流媒体
-      - 🇹🇼 台湾专线01|BGP|流媒体
+    - 🇹🇼 台湾 01
+    - 🇹🇼 台湾 02
+    - 🇹🇼 台湾 03
+    - 🇹🇼 台湾 04
+    - 🇹🇼 台湾 05
+    - 🇹🇼 台湾 06
+    - 🇹🇼 台湾 07
+    - 🇹🇼 台湾 08
+    - 🇹🇼 台湾 09
+    - 🇹🇼 台湾 10
+    - 🇹🇼 台湾高速01|BGP|流媒体
+    - 🇹🇼 台湾专线01|BGP|流媒体
   - name: 🇯🇵 日本节点
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 🇯🇵 日本 01
-      - 🇯🇵 日本 02
-      - 🇯🇵 日本 03
-      - 🇯🇵 日本 04
-      - 🇯🇵 日本 05
-      - 🇯🇵 日本 06
-      - 🇯🇵 日本 07
-      - 🇯🇵 日本 08
-      - 🇯🇵 日本高速01|BGP|流媒体
-      - 🇯🇵 日本高速02|BGP|流媒体
-      - 🇯🇵 日本高速03|BGP|流媒体
-      - 🇯🇵 日本高速04|BGP|流媒体
-      - 🇯🇵 日本高速05|BGP|流媒体
-      - 🇯🇵 日本高速06|BGP|流媒体
-      - 🇯🇵 日本专线01|BGP|流媒体
-      - 🇯🇵 日本专线02|BGP|流媒体
-      - 🇯🇵 日本专线03|BGP|流媒体
+    - 🇯🇵 日本 01
+    - 🇯🇵 日本 02
+    - 🇯🇵 日本 03
+    - 🇯🇵 日本 04
+    - 🇯🇵 日本 05
+    - 🇯🇵 日本 06
+    - 🇯🇵 日本 07
+    - 🇯🇵 日本 08
+    - 🇯🇵 日本高速01|BGP|流媒体
+    - 🇯🇵 日本高速02|BGP|流媒体
+    - 🇯🇵 日本高速03|BGP|流媒体
+    - 🇯🇵 日本高速04|BGP|流媒体
+    - 🇯🇵 日本高速05|BGP|流媒体
+    - 🇯🇵 日本高速06|BGP|流媒体
+    - 🇯🇵 日本专线01|BGP|流媒体
+    - 🇯🇵 日本专线02|BGP|流媒体
+    - 🇯🇵 日本专线03|BGP|流媒体
   - name: 🇸🇬 狮城节点
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 🇸🇬 新加坡 01
-      - 🇸🇬 新加坡 02
-      - 🇸🇬 新加坡 03
-      - 🇸🇬 新加坡 04
-      - 🇸🇬 新加坡高速01|BGP|流媒体
-      - 🇸🇬 新加坡高速02|BGP|流媒体
-      - 🇸🇬 新加坡高速03|BGP|流媒体
-      - 🇸🇬 新加坡高速04|BGP|流媒体
-      - 🇸🇬 新加坡高速05|BGP|流媒体
-      - 🇸🇬 新加坡专线02|BGP|流媒体
-      - 🇸🇬 新加坡专线03|BGP|流媒体
+    - 🇸🇬 新加坡 01
+    - 🇸🇬 新加坡 02
+    - 🇸🇬 新加坡 03
+    - 🇸🇬 新加坡 04
+    - 🇸🇬 新加坡高速01|BGP|流媒体
+    - 🇸🇬 新加坡高速02|BGP|流媒体
+    - 🇸🇬 新加坡高速03|BGP|流媒体
+    - 🇸🇬 新加坡高速04|BGP|流媒体
+    - 🇸🇬 新加坡高速05|BGP|流媒体
+    - 🇸🇬 新加坡专线02|BGP|流媒体
+    - 🇸🇬 新加坡专线03|BGP|流媒体
   - name: 🇦 AmyTelecom
     type: select
     proxies:
-      - 🇭🇰 香港 01
-      - 🇭🇰 香港 02
-      - 🇭🇰 香港 03
-      - 🇭🇰 香港 04
-      - 🇭🇰 香港 05
-      - 🇭🇰 香港 06
-      - 🇭🇰 香港 07
-      - 🇭🇰 香港 08
-      - 🇭🇰 香港 09
-      - 🇭🇰 香港 10
-      - 🇭🇰 香港 11
-      - 🇭🇰 香港 12
-      - 🇭🇰 香港 13
-      - 🇭🇰 香港 14
-      - 🇭🇰 香港 15
-      - 🇭🇰 香港 16
-      - 🇭🇰 香港 17
-      - 🇭🇰 香港 18
-      - 🇭🇰 香港 19
-      - 🇭🇰 香港 20
-      - 🇭🇰 香港 21
-      - 🇺🇸 美国 01
-      - 🇺🇸 美国 02
-      - 🇺🇸 美国 03
-      - 🇺🇸 美国 04
-      - 🇺🇸 美国 05
-      - 🇺🇸 美国 06
-      - 🇺🇸 美国 07
-      - 🇺🇸 美国 08
-      - 🇺🇸 美国 09
-      - 🇺🇸 美国 10
-      - 🇺🇸 美国 11
-      - 🇺🇸 美国 12
-      - 🇺🇸 美国 13
-      - 🇯🇵 日本 01
-      - 🇯🇵 日本 02
-      - 🇯🇵 日本 03
-      - 🇯🇵 日本 04
-      - 🇯🇵 日本 05
-      - 🇯🇵 日本 06
-      - 🇯🇵 日本 07
-      - 🇯🇵 日本 08
-      - 🇹🇼 台湾 01
-      - 🇹🇼 台湾 02
-      - 🇹🇼 台湾 03
-      - 🇹🇼 台湾 04
-      - 🇹🇼 台湾 05
-      - 🇹🇼 台湾 06
-      - 🇹🇼 台湾 07
-      - 🇹🇼 台湾 08
-      - 🇹🇼 台湾 09
-      - 🇹🇼 台湾 10
-      - 🇸🇬 新加坡 01
-      - 🇸🇬 新加坡 02
-      - 🇸🇬 新加坡 03
-      - 🇸🇬 新加坡 04
+    - 🇭🇰 香港 01
+    - 🇭🇰 香港 02
+    - 🇭🇰 香港 03
+    - 🇭🇰 香港 04
+    - 🇭🇰 香港 05
+    - 🇭🇰 香港 06
+    - 🇭🇰 香港 07
+    - 🇭🇰 香港 08
+    - 🇭🇰 香港 09
+    - 🇭🇰 香港 10
+    - 🇭🇰 香港 11
+    - 🇭🇰 香港 12
+    - 🇭🇰 香港 13
+    - 🇭🇰 香港 14
+    - 🇭🇰 香港 15
+    - 🇭🇰 香港 16
+    - 🇭🇰 香港 17
+    - 🇭🇰 香港 18
+    - 🇭🇰 香港 19
+    - 🇭🇰 香港 20
+    - 🇭🇰 香港 21
+    - 🇺🇸 美国 01
+    - 🇺🇸 美国 02
+    - 🇺🇸 美国 03
+    - 🇺🇸 美国 04
+    - 🇺🇸 美国 05
+    - 🇺🇸 美国 06
+    - 🇺🇸 美国 07
+    - 🇺🇸 美国 08
+    - 🇺🇸 美国 09
+    - 🇺🇸 美国 10
+    - 🇺🇸 美国 11
+    - 🇺🇸 美国 12
+    - 🇺🇸 美国 13
+    - 🇯🇵 日本 01
+    - 🇯🇵 日本 02
+    - 🇯🇵 日本 03
+    - 🇯🇵 日本 04
+    - 🇯🇵 日本 05
+    - 🇯🇵 日本 06
+    - 🇯🇵 日本 07
+    - 🇯🇵 日本 08
+    - 🇹🇼 台湾 01
+    - 🇹🇼 台湾 02
+    - 🇹🇼 台湾 03
+    - 🇹🇼 台湾 04
+    - 🇹🇼 台湾 05
+    - 🇹🇼 台湾 06
+    - 🇹🇼 台湾 07
+    - 🇹🇼 台湾 08
+    - 🇹🇼 台湾 09
+    - 🇹🇼 台湾 10
+    - 🇸🇬 新加坡 01
+    - 🇸🇬 新加坡 02
+    - 🇸🇬 新加坡 03
+    - 🇸🇬 新加坡 04
   - name: 🇱 良心云
     type: select
     proxies:
-      - 🇭🇰 香港高速01|BGP|流媒体
-      - 🇭🇰 香港高速02|BGP|流媒体
-      - 🇭🇰 香港高速03|BGP|流媒体
-      - 🇭🇰 香港高速04|BGP|流媒体
-      - 🇸🇬 新加坡高速01|BGP|流媒体
-      - 🇸🇬 新加坡高速02|BGP|流媒体
-      - 🇸🇬 新加坡高速03|BGP|流媒体
-      - 🇸🇬 新加坡高速04|BGP|流媒体
-      - 🇸🇬 新加坡高速05|BGP|流媒体
-      - 🇯🇵 日本高速01|BGP|流媒体
-      - 🇯🇵 日本高速02|BGP|流媒体
-      - 🇯🇵 日本高速03|BGP|流媒体
-      - 🇯🇵 日本高速04|BGP|流媒体
-      - 🇯🇵 日本高速05|BGP|流媒体
-      - 🇯🇵 日本高速06|BGP|流媒体
-      - 🇺🇸 美国高速01|流媒体
-      - 🇺🇸 美国高速03|流媒体
-      - 🇺🇸 美国高速04|流媒体
-      - 🇰🇷 韩国高速01|BGP|流媒体
-      - 🇹🇼 台湾高速01|BGP|流媒体
-      - 🇭🇰 香港专线01|BGP|流媒体
-      - 🇭🇰 香港专线02|BGP|流媒体
-      - 🇭🇰 香港专线03|BGP|流媒体
-      - 🇸🇬 新加坡专线02|BGP|流媒体
-      - 🇸🇬 新加坡专线03|BGP|流媒体
-      - 🇯🇵 日本专线01|BGP|流媒体
-      - 🇯🇵 日本专线02|BGP|流媒体
-      - 🇯🇵 日本专线03|BGP|流媒体
-      - 🇰🇷 韩国专线01|BGP|流媒体
-      - 🇹🇼 台湾专线01|BGP|流媒体
-      - 🇺🇸 美国01|流媒体
-      - 🇺🇸 美国02|流媒体
+    - 🇭🇰 香港高速01|BGP|流媒体
+    - 🇭🇰 香港高速02|BGP|流媒体
+    - 🇭🇰 香港高速03|BGP|流媒体
+    - 🇭🇰 香港高速04|BGP|流媒体
+    - 🇸🇬 新加坡高速01|BGP|流媒体
+    - 🇸🇬 新加坡高速02|BGP|流媒体
+    - 🇸🇬 新加坡高速03|BGP|流媒体
+    - 🇸🇬 新加坡高速04|BGP|流媒体
+    - 🇸🇬 新加坡高速05|BGP|流媒体
+    - 🇯🇵 日本高速01|BGP|流媒体
+    - 🇯🇵 日本高速02|BGP|流媒体
+    - 🇯🇵 日本高速03|BGP|流媒体
+    - 🇯🇵 日本高速04|BGP|流媒体
+    - 🇯🇵 日本高速05|BGP|流媒体
+    - 🇯🇵 日本高速06|BGP|流媒体
+    - 🇺🇸 美国高速01|流媒体
+    - 🇺🇸 美国高速03|流媒体
+    - 🇺🇸 美国高速04|流媒体
+    - 🇰🇷 韩国高速01|BGP|流媒体
+    - 🇹🇼 台湾高速01|BGP|流媒体
+    - 🇭🇰 香港专线01|BGP|流媒体
+    - 🇭🇰 香港专线02|BGP|流媒体
+    - 🇭🇰 香港专线03|BGP|流媒体
+    - 🇸🇬 新加坡专线02|BGP|流媒体
+    - 🇸🇬 新加坡专线03|BGP|流媒体
+    - 🇯🇵 日本专线01|BGP|流媒体
+    - 🇯🇵 日本专线02|BGP|流媒体
+    - 🇯🇵 日本专线03|BGP|流媒体
+    - 🇰🇷 韩国专线01|BGP|流媒体
+    - 🇹🇼 台湾专线01|BGP|流媒体
+    - 🇺🇸 美国01|流媒体
+    - 🇺🇸 美国02|流媒体
 rules:
   - DOMAIN-SUFFIX,tp.belle-vie.xyz,🇭🇰 香港节点
   - DOMAIN-SUFFIX,lulubar.net,🇭🇰 香港节点
