@@ -140,15 +140,41 @@ dns:
   - www.bilibili.com
   - api.bilibili.com
   - a.w.bilicdn1.com
+  - "+.mypikpak.com"
+  - "+.mypikpak.net"	
+  - "+.pikpak.me"	
+  - "+.pikpakdrive.com"	
+  - "+.pickpackapp.com"	
+  - "+.pikpak.io"		
   - resolver.msg.xiaomi.net
+  - mcc.intl.inf.miui.com
+  - logupdate.avlyun.sec.miui.com  
   - dns.weixin.qq.com.cn
+  - voipfinderliveplay.wxqcloud.qq.com
+  - game.weixin.qq.com
+  - appcfg.v.qq.com
+  - cs.map.qq.com
+  - qqdata.ab.qq.com
+  - aeventlog.beacon.qq.com	
+  - aliycdn.flv.wxqcloud.qq.com
+  - apd-pcdnwxstat.teg.tencent-cloud.net	
+  - mmbiz.qpic.cn
+  - mgw.alipay.com
+  - img.alicdn.com
   - maplocatesdksnapshot.d.meituan.net
   - met-cronet-reporter.d.meituan.net
-  - appcloud.zhihu.com
-  - appcloud2.in.zhihu.com
+  - appcloud.zhihu.com 
+  - appcloud2.in.zhihu.com        
   - umengacs.m.taobao.com
-  - +.dbankcloud.cn
-  - st.pinyin.sogou.com
+  - klink.volceapplog.com 
+  - "+.dbankcloud.cn"
+  - pageservice-drcn.weather.dbankcloud.cn   
+  - appdl-1-drcn.dbankcdn.com
+  - hscdn.flv.wxqcloud.qq.com  
+  - hwid-drcn.platform.hicloud.com
+  - sgw-cn.c.huawei.com   
+  - as.alipayobjects.com  
+  - st.pinyin.sogou.com  
 proxies:
   - {name: 🇭🇰 香港 01, server: fe0a4e9.jgalxonu.sbs, port: 19300, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
   - {name: 🇭🇰 香港 02, server: fe0a4e9.jgalxonu.sbs, port: 19305, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
