@@ -140,10 +140,20 @@ dns:
   - www.bilibili.com
   - api.bilibili.com
   - a.w.bilicdn1.com	
+  - "+.mypikpak.com"
+  - "+.mypikpak.net"	
+  - "+.pikpak.me"	
+  - "+.pikpakdrive.com"	
+  - "+.pickpackapp.com"	
+  - "+.pikpak.io"		
   - resolver.msg.xiaomi.net
+  - mcc.intl.inf.miui.com
+  - logupdate.avlyun.sec.miui.com 
   - "+.dbankcloud.cn"
   - pageservice-drcn.weather.dbankcloud.cn   
   - appdl-1-drcn.dbankcdn.com
+  - hwid-drcn.platform.hicloud.com
+  - sgw-cn.c.huawei.com   
   - st.pinyin.sogou.com  
 proxies:
   - {name: 🇭🇰 香港 01, server: fe0a4e9.jgalxonu.sbs, port: 19300, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
