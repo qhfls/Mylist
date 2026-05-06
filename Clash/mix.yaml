@@ -45,9 +45,9 @@ dns:
   - tls://dns.alidns.com:853
   - tls://dot.pub:853
   fallback:
-  - https://wrecking7857.com:44443/dns-query/a0994d53-f963-4279-a10b-2dff35d78dcf
-  - https://carrousel6917.com:44443/dns-query/a0994d53-f963-4279-a10b-2dff35d78dcf
-  - https://simmering3378.com:443/dns-query/a0994d53-f963-4279-a10b-2dff35d78dcf
+  - https://blasphemy4985.com:44443/dns-query/a0994d53-f963-4279-a10b-2dff35d78dcf
+  - https://destitute2725.com:44443/dns-query/a0994d53-f963-4279-a10b-2dff35d78dcf
+  - https://prolonged3729.com:443/dns-query/a0994d53-f963-4279-a10b-2dff35d78dcf
   fallback-filter:
     geoip: true
     geoip-code: CN
