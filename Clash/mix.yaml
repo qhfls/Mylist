@@ -24,8 +24,8 @@ sniffer:
       ports: [443]
       override-destination: true
   skip-domain:
-  - Mijia Cloud
-  - dlg.io.mi.com
+    - Mijia Cloud
+    - dlg.io.mi.com
   force-domain: ~
 dns:
   enable: true
@@ -37,515 +37,503 @@ dns:
   use-hosts: true
   use-system-hosts: false
   default-nameserver:
-  - 119.29.29.29
-  - 223.5.5.5
+    - 119.29.29.29
+    - 223.5.5.5
   nameserver:
-  - https://dns.alidns.com/dns-query
-  - https://doh.pub/dns-query
-  - tls://dns.alidns.com:853
-  - tls://dot.pub:853
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+    - tls://dns.alidns.com:853
+    - tls://dot.pub:853
   fallback:
-  - https://blasphemy4985.com:44443/dns-query/a0994d53-f963-4279-a10b-2dff35d78dcf
-  - https://destitute2725.com:44443/dns-query/a0994d53-f963-4279-a10b-2dff35d78dcf
-  - https://prolonged3729.com:443/dns-query/a0994d53-f963-4279-a10b-2dff35d78dcf
+    - https://kfzzxcx.com:44443/dns-query/a0994d53-f963-4279-a10b-2dff35d78dcf
+    - https://destitute2725.com:44443/dns-query/a0994d53-f963-4279-a10b-2dff35d78dcf
+    - https://prolonged3729.com:443/dns-query/a0994d53-f963-4279-a10b-2dff35d78dcf
   fallback-filter:
     geoip: true
     geoip-code: CN
     ipcidr:
-    - 240.0.0.0/4
-    - 0.0.0.0/32
+      - 240.0.0.0/4
+      - 0.0.0.0/32
     domain:
-    - +.google.com
-    - +.facebook.com
-    - +.youtube.com
-    - +.github.com
-    - +.googlevideo.com
+      - +.google.com
+      - +.facebook.com
+      - +.youtube.com
+      - +.github.com
+      - +.googlevideo.com
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
-  - "*.lan"
-  - "*.localdomain"
-  - "*.example"
-  - "*.invalid"
-  - "*.localhost"
-  - "*.test"
-  - "*.local"
-  - "*.home.arpa"
-  - time.*.com
-  - time.*.gov
-  - time.*.edu.cn
-  - time.*.apple.com
-  - time1.*.com
-  - time2.*.com
-  - time3.*.com
-  - time4.*.com
-  - time5.*.com
-  - time6.*.com
-  - time7.*.com
-  - ntp.*.com
-  - ntp1.*.com
-  - ntp2.*.com
-  - ntp3.*.com
-  - ntp4.*.com
-  - ntp5.*.com
-  - ntp6.*.com
-  - ntp7.*.com
-  - "*.time.edu.cn"
-  - "*.ntp.org.cn"
-  - +.pool.ntp.org
-  - time1.cloud.tencent.com
-  - stun.*.*
-  - stun.*.*.*
-  - swscan.apple.com
-  - mesu.apple.com
-  - music.163.com
-  - "*.music.163.com"
-  - "*.126.net"
-  - musicapi.taihe.com
-  - music.taihe.com
-  - songsearch.kugou.com
-  - trackercdn.kugou.com
-  - "*.kuwo.cn"
-  - api-jooxtt.sanook.com
-  - api.joox.com
-  - y.qq.com
-  - "*.y.qq.com"
-  - streamoc.music.tc.qq.com
-  - mobileoc.music.tc.qq.com
-  - isure.stream.qqmusic.qq.com
-  - dl.stream.qqmusic.qq.com
-  - aqqmusic.tc.qq.com
-  - amobile.music.tc.qq.com
-  - localhost.ptlogin2.qq.com
-  - "*.msftconnecttest.com"
-  - "*.msftncsi.com"
-  - "*.xiami.com"
-  - "*.music.migu.cn"
-  - music.migu.cn
-  - +.wotgame.cn
-  - +.wggames.cn
-  - +.wowsgame.cn
-  - +.wargaming.net
-  - "*.*.*.srv.nintendo.net"
-  - "*.*.stun.playstation.net"
-  - xbox.*.*.microsoft.com
-  - "*.*.xboxlive.com"
-  - "*.ipv6.microsoft.com"
-  - teredo.*.*.*
-  - teredo.*.*
-  - speedtest.cros.wr.pvp.net
-  - +.jjvip8.com
-  - www.douyu.com
-  - activityapi.huya.com
-  - activityapi.huya.com.w.cdngslb.com
-  - www.bilibili.com
-  - api.bilibili.com
-  - a.w.bilicdn1.com	
-  - "+.mypikpak.com"
-  - "+.mypikpak.net"	
-  - "+.pikpak.me"	
-  - "+.pikpakdrive.com"	
-  - "+.pickpackapp.com"	
-  - "+.pikpak.io"		
-  - resolver.msg.xiaomi.net
-  - mcc.intl.inf.miui.com
-  - logupdate.avlyun.sec.miui.com 
-  - "+.dbankcloud.cn"
-  - pageservice-drcn.weather.dbankcloud.cn   
-  - appdl-1-drcn.dbankcdn.com
-  - hwid-drcn.platform.hicloud.com
-  - sgw-cn.c.huawei.com   
-  - st.pinyin.sogou.com  
+    - "*.lan"
+    - "*.localdomain"
+    - "*.example"
+    - "*.invalid"
+    - "*.localhost"
+    - "*.test"
+    - "*.local"
+    - "*.home.arpa"
+    - time.*.com
+    - time.*.gov
+    - time.*.edu.cn
+    - time.*.apple.com
+    - time1.*.com
+    - time2.*.com
+    - time3.*.com
+    - time4.*.com
+    - time5.*.com
+    - time6.*.com
+    - time7.*.com
+    - ntp.*.com
+    - ntp1.*.com
+    - ntp2.*.com
+    - ntp3.*.com
+    - ntp4.*.com
+    - ntp5.*.com
+    - ntp6.*.com
+    - ntp7.*.com
+    - "*.time.edu.cn"
+    - "*.ntp.org.cn"
+    - +.pool.ntp.org
+    - time1.cloud.tencent.com
+    - stun.*.*
+    - stun.*.*.*
+    - swscan.apple.com
+    - mesu.apple.com
+    - music.163.com
+    - "*.music.163.com"
+    - "*.126.net"
+    - musicapi.taihe.com
+    - music.taihe.com
+    - songsearch.kugou.com
+    - trackercdn.kugou.com
+    - "*.kuwo.cn"
+    - api-jooxtt.sanook.com
+    - api.joox.com
+    - y.qq.com
+    - "*.y.qq.com"
+    - streamoc.music.tc.qq.com
+    - mobileoc.music.tc.qq.com
+    - isure.stream.qqmusic.qq.com
+    - dl.stream.qqmusic.qq.com
+    - aqqmusic.tc.qq.com
+    - amobile.music.tc.qq.com
+    - localhost.ptlogin2.qq.com
+    - "*.msftconnecttest.com"
+    - "*.msftncsi.com"
+    - "*.xiami.com"
+    - "*.music.migu.cn"
+    - music.migu.cn
+    - +.wotgame.cn
+    - +.wggames.cn
+    - +.wowsgame.cn
+    - +.wargaming.net
+    - "*.*.*.srv.nintendo.net"
+    - "*.*.stun.playstation.net"
+    - xbox.*.*.microsoft.com
+    - "*.*.xboxlive.com"
+    - "*.ipv6.microsoft.com"
+    - teredo.*.*.*
+    - teredo.*.*
+    - speedtest.cros.wr.pvp.net
+    - +.jjvip8.com
+    - www.douyu.com
+    - activityapi.huya.com
+    - activityapi.huya.com.w.cdngslb.com
+    - www.bilibili.com
+    - api.bilibili.com
+    - a.w.bilicdn1.com
+    - +.mypikpak.com
+    - +.mypikpak.net
+    - +.pikpak.me
+    - +.pikpakdrive.com
+    - +.pickpackapp.com
+    - +.pikpak.io
+    - resolver.msg.xiaomi.net
+    - mcc.intl.inf.miui.com
+    - logupdate.avlyun.sec.miui.com
+    - +.dbankcloud.cn
+    - pageservice-drcn.weather.dbankcloud.cn
+    - appdl-1-drcn.dbankcdn.com
+    - hwid-drcn.platform.hicloud.com
+    - sgw-cn.c.huawei.com
+    - st.pinyin.sogou.com
 proxies:
-  - {name: 🇭🇰 香港 01, server: fe0a4e9.jgalxonu.sbs, port: 19300, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇭🇰 香港 02, server: fe0a4e9.jgalxonu.sbs, port: 19305, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇭🇰 香港 03, server: fe0a4e9.jgalxonu.sbs, port: 19310, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇭🇰 香港 04, server: fe0a4e9.jgalxonu.sbs, port: 19315, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇭🇰 香港 05, server: fe0a4e9.jgalxonu.sbs, port: 19320, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇭🇰 香港 06, server: fe0a4e9.jgalxonu.sbs, port: 19325, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇭🇰 香港 07, server: fe0a4e9.jgalxonu.sbs, port: 19330, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇭🇰 香港 08, server: fe0a4e9.jgalxonu.sbs, port: 19335, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇭🇰 香港 09, server: fe0a4e9.jgalxonu.sbs, port: 19340, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇭🇰 香港 10, server: fe0a4e9.jgalxonu.sbs, port: 19345, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇭🇰 香港 11, server: fe0a4e9.jgalxonu.sbs, port: 19350, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇭🇰 香港 12, server: fe0a4e9.jgalxonu.sbs, port: 19400, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇭🇰 香港 13, server: fe0a4e9.jgalxonu.sbs, port: 19405, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇭🇰 香港 14, server: fe0a4e9.jgalxonu.sbs, port: 19410, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇭🇰 香港 15, server: fe0a4e9.jgalxonu.sbs, port: 19415, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇭🇰 香港 16, server: fe0a4e9.jgalxonu.sbs, port: 19420, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇭🇰 香港 17, server: fe0a4e9.jgalxonu.sbs, port: 19425, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇭🇰 香港 18, server: fe0a4e9.jgalxonu.sbs, port: 19430, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇭🇰 香港 19, server: fe0a4e9.jgalxonu.sbs, port: 19435, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇭🇰 香港 20, server: fe0a4e9.jgalxonu.sbs, port: 19440, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇭🇰 香港 21, server: fe0a4e9.jgalxonu.sbs, port: 19445, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇺🇸 美国 01, server: tgv5af1.vijvydjc.sbs, port: 19100, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇺🇸 美国 02, server: tgv5af1.vijvydjc.sbs, port: 19105, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇺🇸 美国 03, server: tgv5af1.vijvydjc.sbs, port: 19110, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇺🇸 美国 04, server: tgv5af1.vijvydjc.sbs, port: 19115, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇺🇸 美国 05, server: tgv5af1.vijvydjc.sbs, port: 19120, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇺🇸 美国 06, server: tgv5af1.vijvydjc.sbs, port: 19125, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇺🇸 美国 07, server: tgv5af1.vijvydjc.sbs, port: 19130, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇺🇸 美国 08, server: tgv5af1.vijvydjc.sbs, port: 19135, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇺🇸 美国 09, server: tgv5af1.vijvydjc.sbs, port: 19140, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇺🇸 美国 10, server: tgv5af1.vijvydjc.sbs, port: 19145, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇺🇸 美国 11, server: tgv5af1.vijvydjc.sbs, port: 19150, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇺🇸 美国 12, server: tgv5af1.vijvydjc.sbs, port: 19155, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇺🇸 美国 13, server: tgv5af1.vijvydjc.sbs, port: 19160, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇯🇵 日本 01, server: tgv5af1.vijvydjc.sbs, port: 19002, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇯🇵 日本 02, server: tgv5af1.vijvydjc.sbs, port: 19005, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇯🇵 日本 03, server: tgv5af1.vijvydjc.sbs, port: 19010, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇯🇵 日本 04, server: tgv5af1.vijvydjc.sbs, port: 19015, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇯🇵 日本 05, server: tgv5af1.vijvydjc.sbs, port: 19020, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇯🇵 日本 06, server: tgv5af1.vijvydjc.sbs, port: 19025, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇯🇵 日本 07, server: tgv5af1.vijvydjc.sbs, port: 19030, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇯🇵 日本 08, server: tgv5af1.vijvydjc.sbs, port: 19035, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇹🇼 台湾 01, server: fe0a4e9.jgalxonu.sbs, port: 19355, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇹🇼 台湾 02, server: fe0a4e9.jgalxonu.sbs, port: 19360, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇹🇼 台湾 03, server: fe0a4e9.jgalxonu.sbs, port: 19365, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇹🇼 台湾 04, server: fe0a4e9.jgalxonu.sbs, port: 19370, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇹🇼 台湾 05, server: fe0a4e9.jgalxonu.sbs, port: 19375, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇹🇼 台湾 06, server: fe0a4e9.jgalxonu.sbs, port: 19356, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇹🇼 台湾 07, server: fe0a4e9.jgalxonu.sbs, port: 19361, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇹🇼 台湾 08, server: fe0a4e9.jgalxonu.sbs, port: 19366, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇹🇼 台湾 09, server: fe0a4e9.jgalxonu.sbs, port: 19371, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇹🇼 台湾 10, server: fe0a4e9.jgalxonu.sbs, port: 19376, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇸🇬 新加坡 01, server: fe0a4e9.jgalxonu.sbs, port: 19380, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇸🇬 新加坡 02, server: fe0a4e9.jgalxonu.sbs, port: 19385, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇸🇬 新加坡 03, server: fe0a4e9.jgalxonu.sbs, port: 19390, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - {name: 🇸🇬 新加坡 04, server: fe0a4e9.jgalxonu.sbs, port: 19395, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, tfo: false}
-  - { name: 🇭🇰 香港高速01|BGP|流媒体, type: vless, server: aws-link1.liangxin1.xyz, port: 35248, uuid: 21084c83-48c5-45bf-acfb-e47ee5615235, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: chrome, servername: www.lamer.com.hk, reality-opts: { public-key: IGsSxC0wgn7wLy0NM0QN_yOREDKT_814Y_3_rbgDoTc, short-id: c8c0f951 } }
-  - { name: 🇭🇰 香港高速02|BGP|流媒体, type: vless, server: aws-link2.liangxin1.xyz, port: 38725, uuid: 21084c83-48c5-45bf-acfb-e47ee5615235, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: chrome, servername: www.lamer.com.hk, reality-opts: { public-key: HvwnLBMMKsmvghGX5yVPq3J2HWxwr1GGQB2WIvbPvAY, short-id: 8f6ca378 } }
-  - { name: 🇭🇰 香港高速03|BGP|流媒体, type: vless, server: aws-link3.liangxin1.xyz, port: 27758, uuid: 21084c83-48c5-45bf-acfb-e47ee5615235, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: chrome, servername: www.lamer.com.hk, reality-opts: { public-key: EYa4ic3GAxqznV61U-OOww-WKsu5wuQQptyS3fw7czM, short-id: c50db39f } }
-  - { name: 🇭🇰 香港高速04|BGP|流媒体, type: vless, server: aws-link4.liangxin1.xyz, port: 443, uuid: 21084c83-48c5-45bf-acfb-e47ee5615235, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: chrome, servername: www.lamer.com.hk, reality-opts: { public-key: 3FPGTaxkfOM3nEUWUyCiqkH5oJGsOx-WxPJfADi1QWY, short-id: 7f369e14 } }
-  - { name: 🇸🇬 新加坡高速01|BGP|流媒体, type: vless, server: aws-link7.liangxin1.xyz, port: 48574, uuid: 21084c83-48c5-45bf-acfb-e47ee5615235, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: chrome, servername: www.lamer.com.sg, reality-opts: { public-key: lmxSayN8tUg2Dag2MPXrdqZ2SQK9K3OjlaKk8wVCRnc, short-id: f8f18902 } }
-  - { name: 🇸🇬 新加坡高速02|BGP|流媒体, type: vless, server: aws-link8.liangxin1.xyz, port: 39645, uuid: 21084c83-48c5-45bf-acfb-e47ee5615235, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: chrome, servername: iosapps.itunes.apple.com, reality-opts: { public-key: x7VqpFP7_PrY4ebNw8hi8Ec5Tm5Upmt5JOdrN1M9VnQ, short-id: 2b3b0b93 } }
-  - { name: 🇸🇬 新加坡高速03|BGP|流媒体, type: vless, server: aws-link9.liangxin1.xyz, port: 23587, uuid: 21084c83-48c5-45bf-acfb-e47ee5615235, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: chrome, servername: iosapps.itunes.apple.com, reality-opts: { public-key: H66PLLf6HkZwHk4oFqisfTawIvw2cxkEwk8Ue8sHZgA, short-id: 19b580ae } }
-  - { name: 🇸🇬 新加坡高速04|BGP|流媒体, type: vless, server: aws-link10.liangxin1.xyz, port: 443, uuid: 21084c83-48c5-45bf-acfb-e47ee5615235, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: chrome, servername: www.lamer.com.sg, reality-opts: { public-key: xQO7CBh6ymSW9qfw9OGHykh7PLTzWQZjxDT-H4ul2AE, short-id: 2bb6da88 } }
-  - { name: 🇸🇬 新加坡高速05|BGP|流媒体, type: vless, server: aws-link11.liangxin1.xyz, port: 443, uuid: 21084c83-48c5-45bf-acfb-e47ee5615235, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: chrome, servername: www.lamer.com.sg, reality-opts: { public-key: 7DC8gg_Ui9i3tScu-60AxeniPPW3h3VWvvQjblOrwEs, short-id: 18180d97 } }
-  - { name: 🇯🇵 日本高速01|BGP|流媒体, type: vless, server: aws-link13.liangxin1.xyz, port: 36574, uuid: 21084c83-48c5-45bf-acfb-e47ee5615235, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: chrome, servername: www.apple.com.cn, reality-opts: { public-key: sDG-KQk1BF7V83-xnmrWDouXxpPd_ZSxKcHrJJzbols, short-id: 32a3650d } }
-  - { name: 🇯🇵 日本高速02|BGP|流媒体, type: vless, server: aws-link14.liangxin1.xyz, port: 25485, uuid: 21084c83-48c5-45bf-acfb-e47ee5615235, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: chrome, servername: www.apple.com.cn, reality-opts: { public-key: VOFSjjWT0wIH3Q0ntyEZd8WwksrIAb5gPt_3PBnEASg, short-id: 9c5b8c53 } }
-  - { name: 🇯🇵 日本高速03|BGP|流媒体, type: vless, server: aws-link15.liangxin1.xyz, port: 35457, uuid: 21084c83-48c5-45bf-acfb-e47ee5615235, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: chrome, servername: www.apple.com.cn, reality-opts: { public-key: 3gb-aG6qLCJpEOFrEPZ9qKqLvVPA_ovlu0X1PvjcE0k, short-id: 05288db3 } }
-  - { name: 🇯🇵 日本高速04|BGP|流媒体, type: vless, server: cfyes.lxy1015.top, port: 443, uuid: 21084c83-48c5-45bf-acfb-e47ee5615235, udp: true, tls: true, skip-cert-verify: false, flow: '', client-fingerprint: chrome, servername: lxs1jp.lxy1015.top, network: ws, ws-opts: { path: /liangxin/jp1, headers: { Host: lx-1jp.lxy1015.top } } }
-  - { name: 🇯🇵 日本高速05|BGP|流媒体, type: vless, server: cfyes.lxy1015.top, port: 443, uuid: 21084c83-48c5-45bf-acfb-e47ee5615235, udp: true, tls: true, skip-cert-verify: false, flow: '', client-fingerprint: chrome, servername: lxs1jp.lxy1015.top, network: ws, ws-opts: { path: /liangxin/jp1, headers: { Host: lx-1jp.lxy1015.top } } }
-  - { name: 🇯🇵 日本高速06|BGP|流媒体, type: vless, server: cfyes.lxy1015.top, port: 443, uuid: 21084c83-48c5-45bf-acfb-e47ee5615235, udp: true, tls: true, skip-cert-verify: false, flow: '', client-fingerprint: chrome, servername: lxs1jp.lxy1015.top, network: ws, ws-opts: { path: /liangxin/jp1, headers: { Host: lx-1jp.lxy1015.top } } }
-  - { name: 🇺🇸 美国高速01|流媒体, type: vless, server: aws-link19.liangxin1.xyz, port: 443, uuid: 21084c83-48c5-45bf-acfb-e47ee5615235, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: chrome, servername: download-porter.hoyoverse.com, reality-opts: { public-key: QE5l0RUqs4OsH3j3u_xHm06-4NlILmQivZUJqiEx11o, short-id: '6314e825' } }
-  - { name: 🇺🇸 美国高速03|流媒体, type: vless, server: cfyes.lxy1015.top, port: 443, uuid: 21084c83-48c5-45bf-acfb-e47ee5615235, udp: true, tls: true, skip-cert-verify: false, flow: '', client-fingerprint: chrome, servername: lx-us1.lxy1015.top, network: ws, ws-opts: { path: /liangxin/us, headers: { Host: lx-us1.lxy1015.top } } }
-  - { name: 🇺🇸 美国高速04|流媒体, type: vless, server: cfyes.lxy1015.top, port: 443, uuid: 21084c83-48c5-45bf-acfb-e47ee5615235, udp: true, tls: true, skip-cert-verify: false, flow: '', client-fingerprint: chrome, servername: lx-us1.lxy1015.top, network: ws, ws-opts: { path: /liangxin/us, headers: { Host: lx-us1.lxy1015.top } } }
-  - { name: 🇰🇷 韩国高速01|BGP|流媒体, type: vless, server: aws-link25.liangxin1.xyz, port: 34578, uuid: 21084c83-48c5-45bf-acfb-e47ee5615235, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: chrome, servername: download-porter.hoyoverse.com, reality-opts: { public-key: PSn2s5TN4e7n0LkzPunu2IA1hSmOoPYFu3d_psl2Nmc, short-id: e534c8be } }
-  - { name: 🇹🇼 台湾高速01|BGP|流媒体, type: vless, server: aws-link27.liangxin1.xyz, port: 443, uuid: 21084c83-48c5-45bf-acfb-e47ee5615235, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: chrome, servername: download-porter.hoyoverse.com, reality-opts: { public-key: a9I2uA3NNZA6uBAe3Tui9vZ8CG5MrMaYOifWrAdc0zg, short-id: a8609be8 } }
-  - { name: 🇭🇰 香港专线01|BGP|流媒体, server: aws-linkhy1.liangxin1.xyz, port: 60000, ports: 60000-65530, mport: 60000-65530, udp: true, skip-cert-verify: true, sni: iosapps.itunes.apple.com, type: hysteria2, password: 21084c83-48c5-45bf-acfb-e47ee5615235 }
-  - { name: 🇭🇰 香港专线02|BGP|流媒体, server: aws-linkhy2.liangxin1.xyz, port: 60000, ports: 60000-65530, mport: 60000-65530, udp: true, skip-cert-verify: true, sni: iosapps.itunes.apple.com, type: hysteria2, password: 21084c83-48c5-45bf-acfb-e47ee5615235 }
-  - { name: 🇭🇰 香港专线03|BGP|流媒体, server: aws-linkhy3.liangxin1.xyz, port: 60000, ports: 60000-65530, mport: 60000-65530, udp: true, skip-cert-verify: true, sni: iosapps.itunes.apple.com, type: hysteria2, password: 21084c83-48c5-45bf-acfb-e47ee5615235 }
-  - { name: 🇸🇬 新加坡专线02|BGP|流媒体, server: aws-linkhy10.liangxin1.xyz, port: 60000, ports: 60000-65530, mport: 60000-65530, udp: true, skip-cert-verify: true, sni: iosapps.itunes.apple.com, type: hysteria2, password: 21084c83-48c5-45bf-acfb-e47ee5615235 }
-  - { name: 🇸🇬 新加坡专线03|BGP|流媒体, server: aws-linkhy11.liangxin1.xyz, port: 60000, ports: 60000-65530, mport: 60000-65530, udp: true, skip-cert-verify: true, sni: iosapps.itunes.apple.com, type: hysteria2, password: 21084c83-48c5-45bf-acfb-e47ee5615235 }
-  - { name: 🇯🇵 日本专线01|BGP|流媒体, server: aws-linkhy15.liangxin1.xyz, port: 60000, ports: 60000-65530, mport: 60000-65530, udp: true, skip-cert-verify: true, sni: bilibili-jp.biliimg.com, type: hysteria2, password: 21084c83-48c5-45bf-acfb-e47ee5615235 }
-  - { name: 🇯🇵 日本专线02|BGP|流媒体, server: aws-linkhy16.liangxin1.xyz, port: 60000, ports: 60000-65530, mport: 60000-65530, udp: true, skip-cert-verify: true, sni: bilibili-jp2.biliimg.com, type: hysteria2, password: 21084c83-48c5-45bf-acfb-e47ee5615235 }
-  - { name: 🇯🇵 日本专线03|BGP|流媒体, server: aws-linkhy17.liangxin1.xyz, port: 60000, ports: 60000-65530, mport: 60000-65530, udp: true, skip-cert-verify: true, sni: bilibili-jp3.biliimg.com, type: hysteria2, password: 21084c83-48c5-45bf-acfb-e47ee5615235 }
-  - { name: 🇰🇷 韩国专线01|BGP|流媒体, server: aws-linkhy21.liangxin1.xyz, port: 60000, ports: 60000-65530, mport: 60000-65530, udp: true, skip-cert-verify: true, sni: bilibili-kr.biliimg.com, type: hysteria2, password: 21084c83-48c5-45bf-acfb-e47ee5615235 }
-  - { name: 🇹🇼 台湾专线01|BGP|流媒体, server: aws-linkhy23.liangxin1.xyz, port: 60000, ports: 60000-65530, mport: 60000-65530, udp: true, skip-cert-verify: true, sni: bilibili-tw.biliimg.com, type: hysteria2, password: 21084c83-48c5-45bf-acfb-e47ee5615235 }
-  - { name: 🇺🇸 美国01|流媒体, server: 203.10.97.121, port: 60000, ports: 60000-65530, mport: 60000-65530, udp: true, skip-cert-verify: true, sni: www.apple.com, type: hysteria2, password: 21084c83-48c5-45bf-acfb-e47ee5615235 }
-  - { name: 🇺🇸 美国02|流媒体, server: aws-linkhy27.liangxin1.xyz, port: 60000, ports: 60000-65530, mport: 60000-65530, udp: true, skip-cert-verify: true, sni: www.apple.com, type: hysteria2, password: 21084c83-48c5-45bf-acfb-e47ee5615235 }
+  - {name: 🇭🇰 香港 01, server: fe0a4e9.jgalxonu.sbs, port: 19300, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇭🇰 香港 02, server: fe0a4e9.jgalxonu.sbs, port: 19305, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇭🇰 香港 03, server: fe0a4e9.jgalxonu.sbs, port: 19310, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇭🇰 香港 04, server: fe0a4e9.jgalxonu.sbs, port: 19315, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇭🇰 香港 05, server: fe0a4e9.jgalxonu.sbs, port: 19320, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇭🇰 香港 06, server: fe0a4e9.jgalxonu.sbs, port: 19325, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇭🇰 香港 07, server: fe0a4e9.jgalxonu.sbs, port: 19330, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇭🇰 香港 08, server: fe0a4e9.jgalxonu.sbs, port: 19335, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇭🇰 香港 09, server: fe0a4e9.jgalxonu.sbs, port: 19340, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇭🇰 香港 10, server: fe0a4e9.jgalxonu.sbs, port: 19345, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇭🇰 香港 11, server: fe0a4e9.jgalxonu.sbs, port: 19350, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇭🇰 香港 12, server: fe0a4e9.jgalxonu.sbs, port: 19400, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇭🇰 香港 13, server: fe0a4e9.jgalxonu.sbs, port: 19405, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇭🇰 香港 14, server: fe0a4e9.jgalxonu.sbs, port: 19410, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇭🇰 香港 15, server: fe0a4e9.jgalxonu.sbs, port: 19415, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇭🇰 香港 16, server: fe0a4e9.jgalxonu.sbs, port: 19420, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇭🇰 香港 17, server: fe0a4e9.jgalxonu.sbs, port: 19425, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇭🇰 香港 18, server: fe0a4e9.jgalxonu.sbs, port: 19430, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇭🇰 香港 19, server: fe0a4e9.jgalxonu.sbs, port: 19435, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇭🇰 香港 20, server: fe0a4e9.jgalxonu.sbs, port: 19440, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇭🇰 香港 21, server: fe0a4e9.jgalxonu.sbs, port: 19445, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇺🇸 美国 01, server: tgv5af1.vijvydjc.sbs, port: 19100, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇺🇸 美国 02, server: tgv5af1.vijvydjc.sbs, port: 19105, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇺🇸 美国 03, server: tgv5af1.vijvydjc.sbs, port: 19110, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇺🇸 美国 04, server: tgv5af1.vijvydjc.sbs, port: 19115, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇺🇸 美国 05, server: tgv5af1.vijvydjc.sbs, port: 19120, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇺🇸 美国 06, server: tgv5af1.vijvydjc.sbs, port: 19125, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇺🇸 美国 07, server: tgv5af1.vijvydjc.sbs, port: 19130, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇺🇸 美国 08, server: tgv5af1.vijvydjc.sbs, port: 19135, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇺🇸 美国 09, server: tgv5af1.vijvydjc.sbs, port: 19140, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇺🇸 美国 10, server: tgv5af1.vijvydjc.sbs, port: 19145, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇺🇸 美国 11, server: tgv5af1.vijvydjc.sbs, port: 19150, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇺🇸 美国 12, server: tgv5af1.vijvydjc.sbs, port: 19155, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇺🇸 美国 13, server: tgv5af1.vijvydjc.sbs, port: 19160, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇯🇵 日本 01, server: tgv5af1.vijvydjc.sbs, port: 19002, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇯🇵 日本 02, server: tgv5af1.vijvydjc.sbs, port: 19005, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇯🇵 日本 03, server: tgv5af1.vijvydjc.sbs, port: 19010, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇯🇵 日本 04, server: tgv5af1.vijvydjc.sbs, port: 19015, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇯🇵 日本 05, server: tgv5af1.vijvydjc.sbs, port: 19020, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇯🇵 日本 06, server: tgv5af1.vijvydjc.sbs, port: 19025, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇯🇵 日本 07, server: tgv5af1.vijvydjc.sbs, port: 19030, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇯🇵 日本 08, server: tgv5af1.vijvydjc.sbs, port: 19035, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇹🇼 台湾 01, server: fe0a4e9.jgalxonu.sbs, port: 19355, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇹🇼 台湾 02, server: fe0a4e9.jgalxonu.sbs, port: 19360, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇹🇼 台湾 03, server: fe0a4e9.jgalxonu.sbs, port: 19365, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇹🇼 台湾 04, server: fe0a4e9.jgalxonu.sbs, port: 19370, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇹🇼 台湾 05, server: fe0a4e9.jgalxonu.sbs, port: 19375, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇹🇼 台湾 06, server: fe0a4e9.jgalxonu.sbs, port: 19356, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇹🇼 台湾 07, server: fe0a4e9.jgalxonu.sbs, port: 19361, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇹🇼 台湾 08, server: fe0a4e9.jgalxonu.sbs, port: 19366, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇹🇼 台湾 09, server: fe0a4e9.jgalxonu.sbs, port: 19371, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇹🇼 台湾 10, server: fe0a4e9.jgalxonu.sbs, port: 19376, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇸🇬 新加坡 01, server: fe0a4e9.jgalxonu.sbs, port: 19380, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇸🇬 新加坡 02, server: fe0a4e9.jgalxonu.sbs, port: 19385, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇸🇬 新加坡 03, server: fe0a4e9.jgalxonu.sbs, port: 19390, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇸🇬 新加坡 04, server: fe0a4e9.jgalxonu.sbs, port: 19395, type: ss, cipher: 2022-blake3-aes-128-gcm, password: jGnwY0PbsWxTqAzngwijdA==:A52kdrUCqquSfwX/EhpajQ==, udp: true, fast-open: false}
+  - {name: 🇭🇰 香港高速01|BGP|流媒体, server: aws-link1.liangxin1.xyz, port: 35248, type: vless, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, tls: true, fast-open: false, udp: true, skip-cert-verify: false, servername: www.lamer.com.hk, fingerprint: safari, client-fingerprint: safari, flow: xtls-rprx-vision, network: tcp, reality-opts: {public-key: IGsSxC0wgn7wLy0NM0QN_yOREDKT_814Y_3_rbgDoTc, short-id: c8c0f951, servername: www.lamer.com.hk}}
+  - {name: 🇭🇰 香港高速02|BGP|流媒体, server: aws-link2.liangxin1.xyz, port: 38725, type: vless, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, tls: true, fast-open: false, udp: true, skip-cert-verify: false, servername: www.lamer.com.hk, fingerprint: safari, client-fingerprint: safari, flow: xtls-rprx-vision, network: tcp, reality-opts: {public-key: HvwnLBMMKsmvghGX5yVPq3J2HWxwr1GGQB2WIvbPvAY, short-id: 8f6ca378, servername: www.lamer.com.hk}}
+  - {name: 🇸🇬 新加坡高速01|BGP|流媒体, server: aws-link7.liangxin1.xyz, port: 48574, type: vless, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, tls: true, fast-open: false, udp: true, skip-cert-verify: false, servername: www.lamer.com.sg, fingerprint: ios, client-fingerprint: ios, flow: xtls-rprx-vision, network: tcp, reality-opts: {public-key: lmxSayN8tUg2Dag2MPXrdqZ2SQK9K3OjlaKk8wVCRnc, short-id: f8f18902, servername: www.lamer.com.sg}}
+  - {name: 🇸🇬 新加坡高速02|BGP|流媒体, server: aws-link8.liangxin1.xyz, port: 39645, type: vless, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, tls: true, fast-open: false, udp: true, skip-cert-verify: false, servername: iosapps.itunes.apple.com, fingerprint: ios, client-fingerprint: ios, flow: xtls-rprx-vision, network: tcp, reality-opts: {public-key: x7VqpFP7_PrY4ebNw8hi8Ec5Tm5Upmt5JOdrN1M9VnQ, short-id: 2b3b0b93, servername: iosapps.itunes.apple.com}}
+  - {name: 🇸🇬 新加坡高速03|BGP|流媒体, server: aws-link9.liangxin1.xyz, port: 23587, type: vless, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, tls: true, fast-open: false, udp: true, skip-cert-verify: false, servername: iosapps.itunes.apple.com, fingerprint: ios, client-fingerprint: ios, flow: xtls-rprx-vision, network: tcp, reality-opts: {public-key: H66PLLf6HkZwHk4oFqisfTawIvw2cxkEwk8Ue8sHZgA, short-id: 19b580ae, servername: iosapps.itunes.apple.com}}
+  - {name: 🇸🇬 新加坡高速04|BGP|流媒体, server: cfyes.lxy1015.top, port: 443, type: vless, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, tls: true, fast-open: false, udp: true, skip-cert-verify: false, servername: lx-1sg.lxy1015.top, fingerprint: chrome, client-fingerprint: chrome, network: ws, ws-opts: {path: "%2Fliangxin%2Fsg1", headers: {Host: lx-1sg.lxy1015.top}}}
+  - {name: 🇸🇬 新加坡高速05|BGP|流媒体, server: cfyes.lxy1015.top, port: 443, type: vless, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, tls: true, fast-open: false, udp: true, skip-cert-verify: false, servername: lx-1sg.lxy1015.top, fingerprint: chrome, client-fingerprint: chrome, network: ws, ws-opts: {path: "%2Fliangxin%2Fsg1", headers: {Host: lx-1sg.lxy1015.top}}}
+  - {name: 🇸🇬 新加坡高速06|BGP|流媒体, server: cfyes.lxy1015.top, port: 443, type: vless, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, tls: true, fast-open: false, udp: true, skip-cert-verify: false, servername: lx-1sg.lxy1015.top, fingerprint: chrome, client-fingerprint: chrome, network: ws, ws-opts: {path: "%2Fliangxin%2Fsg1", headers: {Host: lx-1sg.lxy1015.top}}}
+  - {name: 🇯🇵 日本高速01|BGP|流媒体, server: aws-link13.liangxin1.xyz, port: 36574, type: vless, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, tls: true, fast-open: false, udp: true, skip-cert-verify: false, servername: www.apple.com.cn, fingerprint: safari, client-fingerprint: safari, flow: xtls-rprx-vision, network: tcp, reality-opts: {public-key: sDG-KQk1BF7V83-xnmrWDouXxpPd_ZSxKcHrJJzbols, short-id: 32a3650d, servername: www.apple.com.cn}}
+  - {name: 🇯🇵 日本高速03|BGP|流媒体, server: cfyes.lxy1015.top, port: 443, type: vless, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, tls: true, fast-open: false, udp: true, skip-cert-verify: false, servername: lxs1jp.lxy1015.top, fingerprint: chrome, client-fingerprint: chrome, network: ws, ws-opts: {path: "%2Fliangxin%2Fjp1", headers: {Host: lx-1jp.lxy1015.top}}}
+  - {name: 🇯🇵 日本高速04|BGP|流媒体, server: cfyes.lxy1015.top, port: 443, type: vless, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, tls: true, fast-open: false, udp: true, skip-cert-verify: false, servername: lxs1jp.lxy1015.top, fingerprint: chrome, client-fingerprint: chrome, network: ws, ws-opts: {path: "%2Fliangxin%2Fjp1", headers: {Host: lx-1jp.lxy1015.top}}}
+  - {name: 🇯🇵 日本高速05|BGP|流媒体, server: cfyes.lxy1015.top, port: 443, type: vless, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, tls: true, fast-open: false, udp: true, skip-cert-verify: false, servername: lxs2jp.lxy1015.top, fingerprint: chrome, client-fingerprint: chrome, network: ws, ws-opts: {path: "%2Fliangxin%2Fjp1", headers: {Host: lx-2jp.lxy1015.top}}}
+  - {name: 🇯🇵 日本高速06|BGP|流媒体, server: cfyes.lxy1015.top, port: 443, type: vless, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, tls: true, fast-open: false, udp: true, skip-cert-verify: false, servername: lxs2jp.lxy1015.top, fingerprint: chrome, client-fingerprint: chrome, network: ws, ws-opts: {path: "%2Fliangxin%2Fjp1", headers: {Host: lx-2jp.lxy1015.top}}}
+  - {name: 🇺🇸 美国高速01|流媒体, server: aws-link19.liangxin1.xyz, port: 443, type: vless, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, tls: true, fast-open: false, udp: true, skip-cert-verify: false, servername: download-porter.hoyoverse.com, fingerprint: safari, client-fingerprint: safari, flow: xtls-rprx-vision, network: tcp, reality-opts: {public-key: QE5l0RUqs4OsH3j3u_xHm06-4NlILmQivZUJqiEx11o, short-id: 6314e825, servername: download-porter.hoyoverse.com}}
+  - {name: 🇺🇸 美国高速03|流媒体, server: cfyes.lxy1015.top, port: 443, type: vless, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, tls: true, fast-open: false, udp: true, skip-cert-verify: false, servername: lx-us1.lxy1015.top, fingerprint: chrome, client-fingerprint: chrome, network: ws, ws-opts: {path: "%2Fliangxin%2Fus", headers: {Host: lx-us1.lxy1015.top}}}
+  - {name: 🇺🇸 美国高速04|流媒体, server: cfyes.lxy1015.top, port: 443, type: vless, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, tls: true, fast-open: false, udp: true, skip-cert-verify: false, servername: lx-us1.lxy1015.top, fingerprint: chrome, client-fingerprint: chrome, network: ws, ws-opts: {path: "%2Fliangxin%2Fus", headers: {Host: lx-us1.lxy1015.top}}}
+  - {name: 🇰🇷 韩国高速01|BGP|流媒体, server: aws-link25.liangxin1.xyz, port: 34578, type: vless, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, tls: true, fast-open: false, udp: true, skip-cert-verify: false, servername: download-porter.hoyoverse.com, fingerprint: safari, client-fingerprint: safari, flow: xtls-rprx-vision, network: tcp, reality-opts: {public-key: PSn2s5TN4e7n0LkzPunu2IA1hSmOoPYFu3d_psl2Nmc, short-id: e534c8be, servername: download-porter.hoyoverse.com}}
+  - {name: 🇹🇼 台湾高速01|BGP|流媒体, server: aws-link27.liangxin1.xyz, port: 443, type: vless, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, tls: true, fast-open: false, udp: true, skip-cert-verify: false, servername: download-porter.hoyoverse.com, fingerprint: safari, client-fingerprint: safari, flow: xtls-rprx-vision, network: tcp, reality-opts: {public-key: a9I2uA3NNZA6uBAe3Tui9vZ8CG5MrMaYOifWrAdc0zg, short-id: a8609be8, servername: download-porter.hoyoverse.com}}
+  - {name: 🇭🇰 香港专线02|BGP|流媒体, server: aws-linkhy2.liangxin1.xyz, port: 60000, type: hysteria2, password: 896365e5-d2e6-4139-bc9d-37307c621200, ports: 60000-65530, sni: iosapps.itunes.apple.com, skip-cert-verify: true, fast-open: false, udp: true}
+  - {name: 🇭🇰 香港专线03|BGP|流媒体, server: aws-linkhy3.liangxin1.xyz, port: 60000, type: hysteria2, password: 896365e5-d2e6-4139-bc9d-37307c621200, ports: 60000-65530, sni: iosapps.itunes.apple.com, skip-cert-verify: true, fast-open: false, udp: true}
+  - {name: 🇸🇬 新加坡专线02|BGP|流媒体, server: aws-linkhy10.liangxin1.xyz, port: 60000, type: hysteria2, password: 896365e5-d2e6-4139-bc9d-37307c621200, ports: 60000-65530, sni: iosapps.itunes.apple.com, skip-cert-verify: true, fast-open: false, udp: true}
+  - {name: 🇸🇬 新加坡专线03|BGP|流媒体, server: aws-linkhy11.liangxin1.xyz, port: 60000, type: hysteria2, password: 896365e5-d2e6-4139-bc9d-37307c621200, ports: 60000-65530, sni: iosapps.itunes.apple.com, skip-cert-verify: true, fast-open: false, udp: true}
+  - {name: 🇯🇵 日本专线01|BGP|流媒体, server: aws-linkhy15.liangxin1.xyz, port: 60000, type: hysteria2, password: 896365e5-d2e6-4139-bc9d-37307c621200, ports: 60000-65530, sni: bilibili-jp.biliimg.com, skip-cert-verify: true, fast-open: false, udp: true}
+  - {name: 🇯🇵 日本专线02|BGP|流媒体, server: aws-linkhy16.liangxin1.xyz, port: 60000, type: hysteria2, password: 896365e5-d2e6-4139-bc9d-37307c621200, ports: 60000-65530, sni: bilibili-jp2.biliimg.com, skip-cert-verify: true, fast-open: false, udp: true}
+  - {name: 🇰🇷 韩国专线01|BGP|流媒体, server: aws-linkhy21.liangxin1.xyz, port: 60000, type: hysteria2, password: 896365e5-d2e6-4139-bc9d-37307c621200, ports: 60000-65530, sni: bilibili-kr.biliimg.com, skip-cert-verify: true, fast-open: false, udp: true}
+  - {name: 🇹🇼 台湾专线01|BGP|流媒体, server: aws-linkhy23.liangxin1.xyz, port: 60000, type: hysteria2, password: 896365e5-d2e6-4139-bc9d-37307c621200, ports: 60000-65530, sni: bilibili-tw.biliimg.com, skip-cert-verify: true, fast-open: false, udp: true}
+  - {name: 🇺🇸 美国01|流媒体, server: 203.10.97.121, port: 60000, type: hysteria2, password: 896365e5-d2e6-4139-bc9d-37307c621200, ports: 60000-65530, sni: www.apple.com, skip-cert-verify: true, fast-open: false, udp: true}
+  - {name: 🇺🇸 美国02|流媒体, server: aws-linkhy27.liangxin1.xyz, port: 60000, type: hysteria2, password: 896365e5-d2e6-4139-bc9d-37307c621200, ports: 60000-65530, sni: www.apple.com, skip-cert-verify: true, fast-open: false, udp: true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
-    - 🇭🇰 香港节点
-    - 🇺🇲 美国节点
-    - 🇯🇵 日本节点
-    - 🇹🇼 台湾节点
-    - 🇸🇬 狮城节点
-    - 🇦 AmyTelecom
-    - 🇱 良心云
-    - DIRECT
+      - 🇭🇰 香港节点
+      - 🇺🇲 美国节点
+      - 🇯🇵 日本节点
+      - 🇹🇼 台湾节点
+      - 🇸🇬 狮城节点
+      - 🇦 AmyTelecom
+      - 🇱 良心云
+      - DIRECT
   - name: 🌍 国外媒体
     type: select
     proxies:
-    - 🇭🇰 香港节点
-    - 🇺🇲 美国节点
-    - 🇯🇵 日本节点
-    - 🇹🇼 台湾节点
-    - 🇸🇬 狮城节点
-    - 🚀 节点选择
-    - DIRECT
+      - 🇭🇰 香港节点
+      - 🇺🇲 美国节点
+      - 🇯🇵 日本节点
+      - 🇹🇼 台湾节点
+      - 🇸🇬 狮城节点
+      - 🚀 节点选择
+      - DIRECT
   - name: 🤖 AI
     type: select
     proxies:
-    - 🇭🇰 香港节点
-    - 🇺🇲 美国节点
-    - 🇯🇵 日本节点
-    - 🇹🇼 台湾节点
-    - 🇸🇬 狮城节点
-    - 🚀 节点选择
-    - DIRECT
+      - 🇭🇰 香港节点
+      - 🇺🇲 美国节点
+      - 🇯🇵 日本节点
+      - 🇹🇼 台湾节点
+      - 🇸🇬 狮城节点
+      - 🚀 节点选择
+      - DIRECT
   - name: 📲 Telegram
     type: select
     proxies:
-    - 🇭🇰 香港节点
-    - 🇺🇲 美国节点
-    - 🇯🇵 日本节点
-    - 🇹🇼 台湾节点
-    - 🇸🇬 狮城节点
-    - 🚀 节点选择
-    - DIRECT
+      - 🇭🇰 香港节点
+      - 🇺🇲 美国节点
+      - 🇯🇵 日本节点
+      - 🇹🇼 台湾节点
+      - 🇸🇬 狮城节点
+      - 🚀 节点选择
+      - DIRECT
   - name: 🔞 JavDB
     type: select
     proxies:
-    - 🇭🇰 香港节点
-    - 🇺🇲 美国节点
-    - 🇯🇵 日本节点
-    - 🇹🇼 台湾节点
-    - 🇸🇬 狮城节点
-    - 🚀 节点选择
-    - DIRECT
+      - 🇭🇰 香港节点
+      - 🇺🇲 美国节点
+      - 🇯🇵 日本节点
+      - 🇹🇼 台湾节点
+      - 🇸🇬 狮城节点
+      - 🚀 节点选择
+      - DIRECT
   - name: 🎞️ PikPak
     type: select
     proxies:
-    - DIRECT
-    - 🇭🇰 香港节点
-    - 🇺🇲 美国节点
-    - 🇯🇵 日本节点
-    - 🇹🇼 台湾节点
-    - 🇸🇬 狮城节点
-    - 🚀 节点选择
+      - DIRECT
+      - 🇭🇰 香港节点
+      - 🇺🇲 美国节点
+      - 🇯🇵 日本节点
+      - 🇹🇼 台湾节点
+      - 🇸🇬 狮城节点
+      - 🚀 节点选择
   - name: 🍎 苹果服务
     type: select
     proxies:
-    - DIRECT
-    - 🇭🇰 香港节点
-    - 🇺🇲 美国节点
-    - 🇯🇵 日本节点
-    - 🇹🇼 台湾节点
-    - 🇸🇬 狮城节点
-    - 🚀 节点选择
+      - DIRECT
+      - 🇭🇰 香港节点
+      - 🇺🇲 美国节点
+      - 🇯🇵 日本节点
+      - 🇹🇼 台湾节点
+      - 🇸🇬 狮城节点
+      - 🚀 节点选择
   - name: 🎯 全球直连
     type: select
     proxies:
-    - DIRECT
-    - 🚀 节点选择
+      - DIRECT
+      - 🚀 节点选择
   - name: 🛑 广告拦截
     type: select
     proxies:
-    - REJECT
-    - DIRECT
+      - REJECT
+      - DIRECT
   - name: 🍃 应用净化
     type: select
     proxies:
-    - REJECT
-    - DIRECT
+      - REJECT
+      - DIRECT
   - name: 🐟 漏网之鱼
     type: select
     proxies:
-    - 🚀 节点选择
-    - DIRECT
-    - 🇭🇰 香港节点
-    - 🇺🇲 美国节点
-    - 🇯🇵 日本节点
-    - 🇹🇼 台湾节点
-    - 🇸🇬 狮城节点
+      - 🚀 节点选择
+      - DIRECT
+      - 🇭🇰 香港节点
+      - 🇺🇲 美国节点
+      - 🇯🇵 日本节点
+      - 🇹🇼 台湾节点
+      - 🇸🇬 狮城节点
   - name: 🇭🇰 香港节点
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 300
     proxies:
-    - 🇭🇰 香港 01
-    - 🇭🇰 香港 02
-    - 🇭🇰 香港 03
-    - 🇭🇰 香港 04
-    - 🇭🇰 香港 05
-    - 🇭🇰 香港 06
-    - 🇭🇰 香港 07
-    - 🇭🇰 香港 08
-    - 🇭🇰 香港 09
-    - 🇭🇰 香港 10
-    - 🇭🇰 香港 11
-    - 🇭🇰 香港 12
-    - 🇭🇰 香港 13
-    - 🇭🇰 香港 14
-    - 🇭🇰 香港 15
-    - 🇭🇰 香港 16
-    - 🇭🇰 香港 17
-    - 🇭🇰 香港 18
-    - 🇭🇰 香港 19
-    - 🇭🇰 香港 20
-    - 🇭🇰 香港 21
-    - 🇭🇰 香港高速01|BGP|流媒体
-    - 🇭🇰 香港高速02|BGP|流媒体
-    - 🇭🇰 香港高速03|BGP|流媒体
-    - 🇭🇰 香港高速04|BGP|流媒体
-    - 🇭🇰 香港专线01|BGP|流媒体
-    - 🇭🇰 香港专线02|BGP|流媒体
-    - 🇭🇰 香港专线03|BGP|流媒体
+      - 🇭🇰 香港 01
+      - 🇭🇰 香港 02
+      - 🇭🇰 香港 03
+      - 🇭🇰 香港 04
+      - 🇭🇰 香港 05
+      - 🇭🇰 香港 06
+      - 🇭🇰 香港 07
+      - 🇭🇰 香港 08
+      - 🇭🇰 香港 09
+      - 🇭🇰 香港 10
+      - 🇭🇰 香港 11
+      - 🇭🇰 香港 12
+      - 🇭🇰 香港 13
+      - 🇭🇰 香港 14
+      - 🇭🇰 香港 15
+      - 🇭🇰 香港 16
+      - 🇭🇰 香港 17
+      - 🇭🇰 香港 18
+      - 🇭🇰 香港 19
+      - 🇭🇰 香港 20
+      - 🇭🇰 香港 21
+      - 🇭🇰 香港高速01|BGP|流媒体
+      - 🇭🇰 香港高速02|BGP|流媒体
+      - 🇭🇰 香港专线02|BGP|流媒体
+      - 🇭🇰 香港专线03|BGP|流媒体
   - name: 🇺🇲 美国节点
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 300
     proxies:
-    - 🇺🇸 美国 01
-    - 🇺🇸 美国 02
-    - 🇺🇸 美国 03
-    - 🇺🇸 美国 04
-    - 🇺🇸 美国 05
-    - 🇺🇸 美国 06
-    - 🇺🇸 美国 07
-    - 🇺🇸 美国 08
-    - 🇺🇸 美国 09
-    - 🇺🇸 美国 10
-    - 🇺🇸 美国 11
-    - 🇺🇸 美国 12
-    - 🇺🇸 美国 13
-    - 🇺🇸 美国高速01|流媒体
-    - 🇺🇸 美国高速03|流媒体
-    - 🇺🇸 美国高速04|流媒体
-    - 🇺🇸 美国01|流媒体
-    - 🇺🇸 美国02|流媒体
+      - 🇺🇸 美国 01
+      - 🇺🇸 美国 02
+      - 🇺🇸 美国 03
+      - 🇺🇸 美国 04
+      - 🇺🇸 美国 05
+      - 🇺🇸 美国 06
+      - 🇺🇸 美国 07
+      - 🇺🇸 美国 08
+      - 🇺🇸 美国 09
+      - 🇺🇸 美国 10
+      - 🇺🇸 美国 11
+      - 🇺🇸 美国 12
+      - 🇺🇸 美国 13
+      - 🇺🇸 美国高速01|流媒体
+      - 🇺🇸 美国高速03|流媒体
+      - 🇺🇸 美国高速04|流媒体
+      - 🇺🇸 美国01|流媒体
+      - 🇺🇸 美国02|流媒体
   - name: 🇹🇼 台湾节点
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 300
     proxies:
-    - 🇹🇼 台湾 01
-    - 🇹🇼 台湾 02
-    - 🇹🇼 台湾 03
-    - 🇹🇼 台湾 04
-    - 🇹🇼 台湾 05
-    - 🇹🇼 台湾 06
-    - 🇹🇼 台湾 07
-    - 🇹🇼 台湾 08
-    - 🇹🇼 台湾 09
-    - 🇹🇼 台湾 10
-    - 🇹🇼 台湾高速01|BGP|流媒体
-    - 🇹🇼 台湾专线01|BGP|流媒体
+      - 🇹🇼 台湾 01
+      - 🇹🇼 台湾 02
+      - 🇹🇼 台湾 03
+      - 🇹🇼 台湾 04
+      - 🇹🇼 台湾 05
+      - 🇹🇼 台湾 06
+      - 🇹🇼 台湾 07
+      - 🇹🇼 台湾 08
+      - 🇹🇼 台湾 09
+      - 🇹🇼 台湾 10
+      - 🇹🇼 台湾高速01|BGP|流媒体
+      - 🇹🇼 台湾专线01|BGP|流媒体
   - name: 🇯🇵 日本节点
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 300
     proxies:
-    - 🇯🇵 日本 01
-    - 🇯🇵 日本 02
-    - 🇯🇵 日本 03
-    - 🇯🇵 日本 04
-    - 🇯🇵 日本 05
-    - 🇯🇵 日本 06
-    - 🇯🇵 日本 07
-    - 🇯🇵 日本 08
-    - 🇯🇵 日本高速01|BGP|流媒体
-    - 🇯🇵 日本高速02|BGP|流媒体
-    - 🇯🇵 日本高速03|BGP|流媒体
-    - 🇯🇵 日本高速04|BGP|流媒体
-    - 🇯🇵 日本高速05|BGP|流媒体
-    - 🇯🇵 日本高速06|BGP|流媒体
-    - 🇯🇵 日本专线01|BGP|流媒体
-    - 🇯🇵 日本专线02|BGP|流媒体
-    - 🇯🇵 日本专线03|BGP|流媒体
+      - 🇯🇵 日本 01
+      - 🇯🇵 日本 02
+      - 🇯🇵 日本 03
+      - 🇯🇵 日本 04
+      - 🇯🇵 日本 05
+      - 🇯🇵 日本 06
+      - 🇯🇵 日本 07
+      - 🇯🇵 日本 08
+      - 🇯🇵 日本高速01|BGP|流媒体
+      - 🇯🇵 日本高速03|BGP|流媒体
+      - 🇯🇵 日本高速04|BGP|流媒体
+      - 🇯🇵 日本高速05|BGP|流媒体
+      - 🇯🇵 日本高速06|BGP|流媒体
+      - 🇯🇵 日本专线01|BGP|流媒体
+      - 🇯🇵 日本专线02|BGP|流媒体
   - name: 🇸🇬 狮城节点
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 300
     proxies:
-    - 🇸🇬 新加坡 01
-    - 🇸🇬 新加坡 02
-    - 🇸🇬 新加坡 03
-    - 🇸🇬 新加坡 04
-    - 🇸🇬 新加坡高速01|BGP|流媒体
-    - 🇸🇬 新加坡高速02|BGP|流媒体
-    - 🇸🇬 新加坡高速03|BGP|流媒体
-    - 🇸🇬 新加坡高速04|BGP|流媒体
-    - 🇸🇬 新加坡高速05|BGP|流媒体
-    - 🇸🇬 新加坡专线02|BGP|流媒体
-    - 🇸🇬 新加坡专线03|BGP|流媒体
+      - 🇸🇬 新加坡 01
+      - 🇸🇬 新加坡 02
+      - 🇸🇬 新加坡 03
+      - 🇸🇬 新加坡 04
+      - 🇸🇬 新加坡高速01|BGP|流媒体
+      - 🇸🇬 新加坡高速02|BGP|流媒体
+      - 🇸🇬 新加坡高速03|BGP|流媒体
+      - 🇸🇬 新加坡高速04|BGP|流媒体
+      - 🇸🇬 新加坡高速05|BGP|流媒体
+      - 🇸🇬 新加坡高速06|BGP|流媒体
+      - 🇸🇬 新加坡专线02|BGP|流媒体
+      - 🇸🇬 新加坡专线03|BGP|流媒体
   - name: 🇦 AmyTelecom
     type: select
     proxies:
-    - 🇭🇰 香港 01
-    - 🇭🇰 香港 02
-    - 🇭🇰 香港 03
-    - 🇭🇰 香港 04
-    - 🇭🇰 香港 05
-    - 🇭🇰 香港 06
-    - 🇭🇰 香港 07
-    - 🇭🇰 香港 08
-    - 🇭🇰 香港 09
-    - 🇭🇰 香港 10
-    - 🇭🇰 香港 11
-    - 🇭🇰 香港 12
-    - 🇭🇰 香港 13
-    - 🇭🇰 香港 14
-    - 🇭🇰 香港 15
-    - 🇭🇰 香港 16
-    - 🇭🇰 香港 17
-    - 🇭🇰 香港 18
-    - 🇭🇰 香港 19
-    - 🇭🇰 香港 20
-    - 🇭🇰 香港 21
-    - 🇺🇸 美国 01
-    - 🇺🇸 美国 02
-    - 🇺🇸 美国 03
-    - 🇺🇸 美国 04
-    - 🇺🇸 美国 05
-    - 🇺🇸 美国 06
-    - 🇺🇸 美国 07
-    - 🇺🇸 美国 08
-    - 🇺🇸 美国 09
-    - 🇺🇸 美国 10
-    - 🇺🇸 美国 11
-    - 🇺🇸 美国 12
-    - 🇺🇸 美国 13
-    - 🇯🇵 日本 01
-    - 🇯🇵 日本 02
-    - 🇯🇵 日本 03
-    - 🇯🇵 日本 04
-    - 🇯🇵 日本 05
-    - 🇯🇵 日本 06
-    - 🇯🇵 日本 07
-    - 🇯🇵 日本 08
-    - 🇹🇼 台湾 01
-    - 🇹🇼 台湾 02
-    - 🇹🇼 台湾 03
-    - 🇹🇼 台湾 04
-    - 🇹🇼 台湾 05
-    - 🇹🇼 台湾 06
-    - 🇹🇼 台湾 07
-    - 🇹🇼 台湾 08
-    - 🇹🇼 台湾 09
-    - 🇹🇼 台湾 10
-    - 🇸🇬 新加坡 01
-    - 🇸🇬 新加坡 02
-    - 🇸🇬 新加坡 03
-    - 🇸🇬 新加坡 04
+      - 🇭🇰 香港 01
+      - 🇭🇰 香港 02
+      - 🇭🇰 香港 03
+      - 🇭🇰 香港 04
+      - 🇭🇰 香港 05
+      - 🇭🇰 香港 06
+      - 🇭🇰 香港 07
+      - 🇭🇰 香港 08
+      - 🇭🇰 香港 09
+      - 🇭🇰 香港 10
+      - 🇭🇰 香港 11
+      - 🇭🇰 香港 12
+      - 🇭🇰 香港 13
+      - 🇭🇰 香港 14
+      - 🇭🇰 香港 15
+      - 🇭🇰 香港 16
+      - 🇭🇰 香港 17
+      - 🇭🇰 香港 18
+      - 🇭🇰 香港 19
+      - 🇭🇰 香港 20
+      - 🇭🇰 香港 21
+      - 🇺🇸 美国 01
+      - 🇺🇸 美国 02
+      - 🇺🇸 美国 03
+      - 🇺🇸 美国 04
+      - 🇺🇸 美国 05
+      - 🇺🇸 美国 06
+      - 🇺🇸 美国 07
+      - 🇺🇸 美国 08
+      - 🇺🇸 美国 09
+      - 🇺🇸 美国 10
+      - 🇺🇸 美国 11
+      - 🇺🇸 美国 12
+      - 🇺🇸 美国 13
+      - 🇯🇵 日本 01
+      - 🇯🇵 日本 02
+      - 🇯🇵 日本 03
+      - 🇯🇵 日本 04
+      - 🇯🇵 日本 05
+      - 🇯🇵 日本 06
+      - 🇯🇵 日本 07
+      - 🇯🇵 日本 08
+      - 🇹🇼 台湾 01
+      - 🇹🇼 台湾 02
+      - 🇹🇼 台湾 03
+      - 🇹🇼 台湾 04
+      - 🇹🇼 台湾 05
+      - 🇹🇼 台湾 06
+      - 🇹🇼 台湾 07
+      - 🇹🇼 台湾 08
+      - 🇹🇼 台湾 09
+      - 🇹🇼 台湾 10
+      - 🇸🇬 新加坡 01
+      - 🇸🇬 新加坡 02
+      - 🇸🇬 新加坡 03
+      - 🇸🇬 新加坡 04
   - name: 🇱 良心云
     type: select
     proxies:
-    - 🇭🇰 香港高速01|BGP|流媒体
-    - 🇭🇰 香港高速02|BGP|流媒体
-    - 🇭🇰 香港高速03|BGP|流媒体
-    - 🇭🇰 香港高速04|BGP|流媒体
-    - 🇸🇬 新加坡高速01|BGP|流媒体
-    - 🇸🇬 新加坡高速02|BGP|流媒体
-    - 🇸🇬 新加坡高速03|BGP|流媒体
-    - 🇸🇬 新加坡高速04|BGP|流媒体
-    - 🇸🇬 新加坡高速05|BGP|流媒体
-    - 🇯🇵 日本高速01|BGP|流媒体
-    - 🇯🇵 日本高速02|BGP|流媒体
-    - 🇯🇵 日本高速03|BGP|流媒体
-    - 🇯🇵 日本高速04|BGP|流媒体
-    - 🇯🇵 日本高速05|BGP|流媒体
-    - 🇯🇵 日本高速06|BGP|流媒体
-    - 🇺🇸 美国高速01|流媒体
-    - 🇺🇸 美国高速03|流媒体
-    - 🇺🇸 美国高速04|流媒体
-    - 🇰🇷 韩国高速01|BGP|流媒体
-    - 🇹🇼 台湾高速01|BGP|流媒体
-    - 🇭🇰 香港专线01|BGP|流媒体
-    - 🇭🇰 香港专线02|BGP|流媒体
-    - 🇭🇰 香港专线03|BGP|流媒体
-    - 🇸🇬 新加坡专线02|BGP|流媒体
-    - 🇸🇬 新加坡专线03|BGP|流媒体
-    - 🇯🇵 日本专线01|BGP|流媒体
-    - 🇯🇵 日本专线02|BGP|流媒体
-    - 🇯🇵 日本专线03|BGP|流媒体
-    - 🇰🇷 韩国专线01|BGP|流媒体
-    - 🇹🇼 台湾专线01|BGP|流媒体
-    - 🇺🇸 美国01|流媒体
-    - 🇺🇸 美国02|流媒体
+      - 🇭🇰 香港高速01|BGP|流媒体
+      - 🇭🇰 香港高速02|BGP|流媒体
+      - 🇸🇬 新加坡高速01|BGP|流媒体
+      - 🇸🇬 新加坡高速02|BGP|流媒体
+      - 🇸🇬 新加坡高速03|BGP|流媒体
+      - 🇸🇬 新加坡高速04|BGP|流媒体
+      - 🇸🇬 新加坡高速05|BGP|流媒体
+      - 🇸🇬 新加坡高速06|BGP|流媒体
+      - 🇯🇵 日本高速01|BGP|流媒体
+      - 🇯🇵 日本高速03|BGP|流媒体
+      - 🇯🇵 日本高速04|BGP|流媒体
+      - 🇯🇵 日本高速05|BGP|流媒体
+      - 🇯🇵 日本高速06|BGP|流媒体
+      - 🇺🇸 美国高速01|流媒体
+      - 🇺🇸 美国高速03|流媒体
+      - 🇺🇸 美国高速04|流媒体
+      - 🇰🇷 韩国高速01|BGP|流媒体
+      - 🇹🇼 台湾高速01|BGP|流媒体
+      - 🇭🇰 香港专线02|BGP|流媒体
+      - 🇭🇰 香港专线03|BGP|流媒体
+      - 🇸🇬 新加坡专线02|BGP|流媒体
+      - 🇸🇬 新加坡专线03|BGP|流媒体
+      - 🇯🇵 日本专线01|BGP|流媒体
+      - 🇯🇵 日本专线02|BGP|流媒体
+      - 🇰🇷 韩国专线01|BGP|流媒体
+      - 🇹🇼 台湾专线01|BGP|流媒体
+      - 🇺🇸 美国01|流媒体
+      - 🇺🇸 美国02|流媒体
 rules:
   - DOMAIN-SUFFIX,tp.belle-vie.xyz,🇭🇰 香港节点
   - DOMAIN-SUFFIX,lulubar.net,🇭🇰 香港节点
