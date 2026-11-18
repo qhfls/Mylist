@@ -1,66 +1,50 @@
 mixed-port: 7890
+socks-port: 7891
 allow-lan: true
 mode: rule
-log-level: warning
+log-level: info
 ipv6: false
 profile:
-  store-selected: true
-  store-fake-ip: true
-  tracing: true
 unified-delay: true
-clash-for-android:
-  append-system-dns: false
-hosts: ~
+hosts:
+  1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs: 0647316e-81a0-4fd2-abc1-e6a599744142.skbi6uedh8.sbs
+  03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs: f8f50ca3-63b7-4be5-b9b0-398b3d15c438.ib8ktyn09d.sbs
 sniffer:
   enable: true
-  parse-pure-ip: false
+  parse-pure-ip: true
   force-dns-mapping: true
   override-destination: true
   sniff:
-    HTTP:
-      ports: [80, 443]
-      override-destination: true
-    TLS:
-      ports: [443]
-      override-destination: true
+    TLS: {ports: [443], override-destination: true}
+    HTTP: {ports: [443], override-destination: true}
   skip-domain:
     - Mijia Cloud
     - dlg.io.mi.com
-  force-domain: ~
 dns:
   enable: true
-  cache-algorithm: arc
   ipv6: false
-  prefer-h3: false
-  listen: 0.0.0.0:1053
+  listen: 127.0.0.1:7874
   enhanced-mode: fake-ip
   use-hosts: true
   use-system-hosts: false
+  proxy-server-nameserver:
+    - udp://127.0.0.1:7874
   default-nameserver:
+    - 119.28.28.28
     - 119.29.29.29
     - 223.5.5.5
+    - 223.6.6.6
+  direct-nameserver:
+    - 119.28.28.28
+    - 119.29.29.29
+    - 223.5.5.5
+    - 223.6.6.6
   nameserver:
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
-    - tls://dns.alidns.com:853
-    - tls://dot.pub:853
-  fallback:
-    - https://kfzzxcx.com:44443/dns-query/a0994d53-f963-4279-a10b-2dff35d78dcf
+    - https://iqsjp.com:44443/dns-query/a0994d53-f963-4279-a10b-2dff35d78dcf
+    - https://blasphemy4985.com:44443/dns-query/a0994d53-f963-4279-a10b-2dff35d78dcf
     - https://destitute2725.com:44443/dns-query/a0994d53-f963-4279-a10b-2dff35d78dcf
     - https://prolonged3729.com:443/dns-query/a0994d53-f963-4279-a10b-2dff35d78dcf
-  fallback-filter:
-    geoip: true
-    geoip-code: CN
-    ipcidr:
-      - 240.0.0.0/4
-      - 0.0.0.0/32
-    domain:
-      - +.google.com
-      - +.facebook.com
-      - +.youtube.com
-      - +.github.com
-      - +.googlevideo.com
-  fake-ip-range: 198.18.0.1/16
+  fake-ip-range: 198.18.0.1/15
   fake-ip-filter:
     - 1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs
     - 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs
@@ -144,6 +128,10 @@ dns:
     - www.bilibili.com
     - api.bilibili.com
     - a.w.bilicdn1.com
+    - iqsjp.com
+    - blasphemy4985.com
+    - destitute2725.com
+    - prolonged3729.com
     - +.mypikpak.com
     - +.mypikpak.net
     - +.pikpak.me
@@ -160,108 +148,62 @@ dns:
     - sgw-cn.c.huawei.com
     - st.pinyin.sogou.com
 proxies:
-  - {name: 🇭🇰 香港 01, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20300, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇭🇰 香港 02, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20305, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇭🇰 香港 03, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20310, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇭🇰 香港 04, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20315, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇭🇰 香港 05, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20320, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇭🇰 香港 06, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20325, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇭🇰 香港 07, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20330, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇭🇰 香港 08, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20335, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇭🇰 香港 09, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20340, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇭🇰 香港 10, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20345, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇭🇰 香港 11, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20350, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇭🇰 香港 12, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20400, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇭🇰 香港 13, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20405, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇭🇰 香港 14, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20410, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇭🇰 香港 15, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20415, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇭🇰 香港 16, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20420, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇭🇰 香港 17, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20425, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇭🇰 香港 18, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20430, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇭🇰 香港 19, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20435, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇭🇰 香港 20, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20440, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇭🇰 香港 21, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20445, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇺🇸 美国 01, server: 1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs, port: 20100, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇺🇸 美国 02, server: 1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs, port: 20105, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇺🇸 美国 03, server: 1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs, port: 20110, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇺🇸 美国 04, server: 1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs, port: 20115, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇺🇸 美国 05, server: 1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs, port: 20120, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇺🇸 美国 06, server: 1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs, port: 20125, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇺🇸 美国 07, server: 1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs, port: 20130, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇺🇸 美国 08, server: 1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs, port: 20135, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇺🇸 美国 09, server: 1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs, port: 20140, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇺🇸 美国 10, server: 1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs, port: 20145, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇺🇸 美国 11, server: 1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs, port: 20150, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇺🇸 美国 12, server: 1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs, port: 20155, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇺🇸 美国 13, server: 1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs, port: 20160, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇯🇵 日本 01, server: 1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs, port: 20002, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇯🇵 日本 02, server: 1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs, port: 20005, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇯🇵 日本 03, server: 1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs, port: 20010, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇯🇵 日本 04, server: 1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs, port: 20015, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇯🇵 日本 05, server: 1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs, port: 20020, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇯🇵 日本 06, server: 1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs, port: 20025, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇯🇵 日本 07, server: 1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs, port: 20030, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇯🇵 日本 08, server: 1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs, port: 20035, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇹🇼 台湾 01, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20355, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇹🇼 台湾 02, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20360, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇹🇼 台湾 03, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20365, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇹🇼 台湾 04, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20370, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇹🇼 台湾 05, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20375, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇹🇼 台湾 06, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20356, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇹🇼 台湾 07, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20361, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇹🇼 台湾 08, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20366, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇹🇼 台湾 09, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20371, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇹🇼 台湾 10, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20376, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇸🇬 新加坡 01, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20380, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇸🇬 新加坡 02, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20385, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇸🇬 新加坡 03, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20390, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - {name: 🇸🇬 新加坡 04, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20395, type: anytls, client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, min-idle-session: 0, alpn: [h2], password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, skip-cert-verify: true, udp: true, tfo: false}
-  - { name: 🇯🇵 日本高速01|CTCU|0.5x, type: vless, server: cfyes.lxy1015.top, port: 443, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, udp: true, tls: true, skip-cert-verify: false, client-fingerprint: safari, servername: jp-lx.777076.xyz, network: ws, ws-opts: { path: /liangxin/jp1, headers: { Host: jp-lx.777076.xyz } } }
-  - { name: 🇯🇵 日本高速02|CTCU|0.5x, type: vless, server: cfyes.lxy1015.top, port: 443, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, udp: true, tls: true, skip-cert-verify: false, client-fingerprint: safari, servername: jp2-lx.777076.xyz, network: ws, ws-opts: { path: /liangxin/jp1, headers: { Host: jp2-lx.777076.xyz } } }
-  - { name: 🇭🇰 香港高速01|BGP|CMCU, type: vless, server: aws-link1.liangxin1.xyz, port: 35248, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, udp: true, flow: xtls-rprx-vision, tls: true, skip-cert-verify: false, client-fingerprint: safari, servername: www.lamer.com.hk, reality-opts: { public-key: IGsSxC0wgn7wLy0NM0QN_yOREDKT_814Y_3_rbgDoTc, short-id: c8c0f951 } }
-  - { name: 🇭🇰 香港高速02|BGP|CMCU, type: vless, server: aws-link2.liangxin1.xyz, port: 38725, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, udp: true, flow: xtls-rprx-vision, tls: true, skip-cert-verify: false, client-fingerprint: safari, servername: www.lamer.com.hk, reality-opts: { public-key: HvwnLBMMKsmvghGX5yVPq3J2HWxwr1GGQB2WIvbPvAY, short-id: 8f6ca378 } }
-  - { name: 🇭🇰 香港高速03|BGP|CMCU, type: vless, server: aws-link3.liangxin1.xyz, port: 27758, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, udp: true, flow: xtls-rprx-vision, tls: true, skip-cert-verify: false, client-fingerprint: ios, servername: www.lamer.com.hk, reality-opts: { public-key: EYa4ic3GAxqznV61U-OOww-WKsu5wuQQptyS3fw7czM, short-id: c50db39f } }
-  - { name: 🇭🇰 香港高速04|BGP|CMCU, type: vless, server: aws-link4.liangxin1.xyz, port: 443, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, udp: true, flow: xtls-rprx-vision, tls: true, skip-cert-verify: false, client-fingerprint: ios, servername: www.lamer.com.hk, reality-opts: { public-key: 3FPGTaxkfOM3nEUWUyCiqkH5oJGsOx-WxPJfADi1QWY, short-id: 7f369e14 } }
-  - { name: 🇭🇰 香港高速05|BGP|CMCU, type: vless, server: aws-link5.liangxin1.xyz, port: 443, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, udp: true, flow: xtls-rprx-vision, tls: true, skip-cert-verify: false, client-fingerprint: ios, servername: www.lamer.com.hk, reality-opts: { public-key: a11gdDetacKBsiBBfhsPvanTGMtVyZEIvax7gU5Wplg, short-id: 9bf38508 } }
-  - { name: 🇸🇬 新加坡高速01|BGP|CTCUCM, type: vless, server: aws-link7.liangxin1.xyz, port: 48574, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, udp: true, flow: xtls-rprx-vision, tls: true, skip-cert-verify: false, client-fingerprint: ios, servername: www.lamer.com.sg, reality-opts: { public-key: lmxSayN8tUg2Dag2MPXrdqZ2SQK9K3OjlaKk8wVCRnc, short-id: f8f18902 } }
-  - { name: 🇸🇬 新加坡高速02|BGP|CTCUCM, type: vless, server: aws-link8.liangxin1.xyz, port: 39645, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, udp: true, flow: xtls-rprx-vision, tls: true, skip-cert-verify: false, client-fingerprint: ios, servername: iosapps.itunes.apple.com, reality-opts: { public-key: x7VqpFP7_PrY4ebNw8hi8Ec5Tm5Upmt5JOdrN1M9VnQ, short-id: 2b3b0b93 } }
-  - { name: 🇸🇬 新加坡高速03|BGP|CTCUCM, type: vless, server: aws-link9.liangxin1.xyz, port: 23587, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, udp: true, flow: xtls-rprx-vision, tls: true, skip-cert-verify: false, client-fingerprint: ios, servername: iosapps.itunes.apple.com, reality-opts: { public-key: H66PLLf6HkZwHk4oFqisfTawIvw2cxkEwk8Ue8sHZgA, short-id: 19b580ae } }
-  - { name: 🇸🇬 新加坡高速04|BGP|CTCUCM, type: vless, server: aws-link30.liangxin1.xyz, port: 23568, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, udp: true, flow: xtls-rprx-vision, tls: true, skip-cert-verify: false, client-fingerprint: safari, servername: www.lamer.com.hk, reality-opts: { public-key: EjcM-ENrpWY8iIL82qJtQrZgRs4KlVqhdisqLAXonUY, short-id: 55d046dc } }
-  - { name: 🇸🇬 新加坡高速05|BGP|CTCUCM, type: vless, server: aws-link31.liangxin1.xyz, port: 443, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, udp: true, flow: xtls-rprx-vision, tls: true, skip-cert-verify: false, client-fingerprint: safari, servername: download-porter.hoyoverse.com, reality-opts: { public-key: wXayfckurSM2zWeis7OAL_QVGm9wBLr0WYp2zFtJFAE, short-id: c7487aeb } }
-  - { name: 🇸🇬 新加坡高速06|BGP|CTCU, type: vless, server: cfyes.lxy1015.top, port: 443, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, udp: true, tls: true, skip-cert-verify: false, client-fingerprint: chrome, servername: lx-1sg.lxy1015.top, network: ws, ws-opts: { path: /liangxin/sg1, headers: { Host: lx-1sg.lxy1015.top } } }
-  - { name: 🇸🇬 新加坡高速07|BGP|CTCU, type: vless, server: cfyes.lxy1015.top, port: 443, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, udp: true, tls: true, skip-cert-verify: false, client-fingerprint: chrome, servername: lx-1sg.lxy1015.top, network: ws, ws-opts: { path: /liangxin/sg1, headers: { Host: lx-1sg.lxy1015.top } } }
-  - { name: 🇸🇬 新加坡高速08|BGP|CTCU, type: vless, server: cfyes.lxy1015.top, port: 443, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, udp: true, tls: true, skip-cert-verify: false, client-fingerprint: chrome, servername: lx-1sg.lxy1015.top, network: ws, ws-opts: { path: /liangxin/sg1, headers: { Host: lx-1sg.lxy1015.top } } }
-  - { name: 🇯🇵 日本高速01|BGP|CUCM, type: vless, server: aws-link13.liangxin1.xyz, port: 36574, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, udp: true, flow: xtls-rprx-vision, tls: true, skip-cert-verify: false, client-fingerprint: safari, servername: www.apple.com.cn, reality-opts: { public-key: sDG-KQk1BF7V83-xnmrWDouXxpPd_ZSxKcHrJJzbols, short-id: 32a3650d } }
-  - { name: 🇯🇵 日本高速02|BGP|CUCM, type: vless, server: aws-link14.liangxin1.xyz, port: 25485, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, udp: true, flow: xtls-rprx-vision, tls: true, skip-cert-verify: false, client-fingerprint: ios, servername: www.apple.com.cn, reality-opts: { public-key: VOFSjjWT0wIH3Q0ntyEZd8WwksrIAb5gPt_3PBnEASg, short-id: 9c5b8c53 } }
-  - { name: 🇯🇵 日本高速03|BGP|CUCM, type: vless, server: aws-link19.liangxin1.xyz, port: 8654, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, udp: true, flow: xtls-rprx-vision, tls: true, skip-cert-verify: false, client-fingerprint: safari, servername: download-porter.hoyoverse.com, reality-opts: { public-key: QE5l0RUqs4OsH3j3u_xHm06-4NlILmQivZUJqiEx11o, short-id: '6314e825' } }
-  - { name: 🇯🇵 日本高速04|BGP|CUCM, type: vless, server: aws-link20.liangxin1.xyz, port: 443, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, udp: true, flow: xtls-rprx-vision, tls: true, skip-cert-verify: false, client-fingerprint: ios, servername: download-porter.hoyoverse.com, reality-opts: { public-key: QE5l0RUqs4OsH3j3u_xHm06-4NlILmQivZUJqiEx11o, short-id: '6314e825' } }
-  - { name: 🇯🇵 日本高速05|BGP|CUCM, type: vless, server: aws-link23.liangxin1.xyz, port: 443, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, udp: true, flow: xtls-rprx-vision, tls: true, skip-cert-verify: false, client-fingerprint: safari, servername: download-porter.hoyoverse.com, reality-opts: { public-key: dLmUAqcdy4Z7iucApd9zjOhkXTjl-xt_eHumShIYW0c, short-id: ba826a54 } }
-  - { name: 🇯🇵 日本高速06|BGP|CTCU, type: vless, server: cfyes.lxy1015.top, port: 443, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, udp: true, tls: true, skip-cert-verify: false, client-fingerprint: chrome, servername: lxs1jp.lxy1015.top, network: ws, ws-opts: { path: /liangxin/jp1, headers: { Host: lx-1jp.lxy1015.top } } }
-  - { name: 🇯🇵 日本高速07|BGP|CTCU, type: vless, server: cfyes.lxy1015.top, port: 443, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, udp: true, tls: true, skip-cert-verify: false, client-fingerprint: chrome, servername: lxs1jp.lxy1015.top, network: ws, ws-opts: { path: /liangxin/jp1, headers: { Host: lx-1jp.lxy1015.top } } }
-  - { name: 🇯🇵 日本高速08|BGP|CTCU, type: vless, server: cfyes.lxy1015.top, port: 443, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, udp: true, tls: true, skip-cert-verify: false, client-fingerprint: chrome, servername: lxs2jp.lxy1015.top, network: ws, ws-opts: { path: /liangxin/jp1, headers: { Host: lx-2jp.lxy1015.top } } }
-  - { name: 🇯🇵 日本高速09|BGP|CTCU, type: vless, server: cfyes.lxy1015.top, port: 443, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, udp: true, tls: true, skip-cert-verify: false, client-fingerprint: chrome, servername: lxs2jp.lxy1015.top, network: ws, ws-opts: { path: /liangxin/jp1, headers: { Host: lx-2jp.lxy1015.top } } }
-  - { name: 🇺🇸 美国高速01|CTCU, type: vless, server: cfyes.lxy1015.top, port: 443, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, udp: true, tls: true, skip-cert-verify: false, client-fingerprint: chrome, servername: lx-us1.lxy1015.top, network: ws, ws-opts: { path: /liangxin/us, headers: { Host: lx-us1.lxy1015.top } } }
-  - { name: 🇺🇸 美国高速02|CTCU, type: vless, server: cfyes.lxy1015.top, port: 443, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, udp: true, tls: true, skip-cert-verify: false, client-fingerprint: chrome, servername: lx-us1.lxy1015.top, network: ws, ws-opts: { path: /liangxin/us, headers: { Host: lx-us1.lxy1015.top } } }
-  - { name: 🇬🇧 英国伦敦|CTCU|0.1x, type: vless, server: cfyes.lxy1015.top, port: 443, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, udp: true, tls: true, skip-cert-verify: false, client-fingerprint: ios, servername: gb-lx.777076.xyz, network: ws, ws-opts: { path: /liangxin/gb1, headers: { Host: gb-lx.777076.xyz } } }
-  - { name: 🇰🇷 韩国高速01|BGP|流媒体, type: vless, server: aws-link27.liangxin1.xyz, port: 443, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, udp: true, flow: xtls-rprx-vision, tls: true, skip-cert-verify: false, client-fingerprint: safari, servername: download-porter.hoyoverse.com, reality-opts: { public-key: a9I2uA3NNZA6uBAe3Tui9vZ8CG5MrMaYOifWrAdc0zg, short-id: a8609be8 } }
-  - { name: 🇹🇼 台湾高速01|BGP|流媒体, type: vless, server: aws-link28.liangxin1.xyz, port: 443, uuid: 896365e5-d2e6-4139-bc9d-37307c621200, udp: true, flow: xtls-rprx-vision, tls: true, skip-cert-verify: false, client-fingerprint: safari, servername: download-porter.hoyoverse.com, reality-opts: { public-key: PFTc9Cn176HxLhtBCIzONGZIBVDJJodsCs4QHaTt7Sc, short-id: b8fe57fe } }
-  - { name: 🇭🇰 香港专线01|BGP|流媒体, server: aws-linkhy1.liangxin1.xyz, port: 60000, ports: 60000-65530, mport: 60000-65530, udp: true, skip-cert-verify: true, sni: iosapps.itunes.apple.com, type: hysteria2, password: 896365e5-d2e6-4139-bc9d-37307c621200 }
-  - { name: 🇭🇰 香港专线02|BGP|流媒体, server: aws-linkhy2.liangxin1.xyz, port: 60000, ports: 60000-65530, mport: 60000-65530, udp: true, skip-cert-verify: true, sni: iosapps.itunes.apple.com, type: hysteria2, password: 896365e5-d2e6-4139-bc9d-37307c621200 }
-  - { name: 🇭🇰 香港专线03|BGP|流媒体, server: aws-linkhy3.liangxin1.xyz, port: 60000, ports: 60000-65530, mport: 60000-65530, udp: true, skip-cert-verify: true, sni: iosapps.itunes.apple.com, type: hysteria2, password: 896365e5-d2e6-4139-bc9d-37307c621200 }
-  - { name: 🇭🇰 香港专线04|BGP|流媒体, server: aws-linkhy4.liangxin1.xyz, port: 60000, ports: 60000-65530, mport: 60000-65530, udp: true, skip-cert-verify: true, sni: iosapps.itunes.apple.com, type: hysteria2, password: 896365e5-d2e6-4139-bc9d-37307c621200 }
-  - { name: 🇸🇬 新加坡专线01|BGP|流媒体, server: aws-linkhy9.liangxin1.xyz, port: 60000, ports: 60000-65530, mport: 60000-65530, udp: true, skip-cert-verify: true, sni: iosapps.itunes.apple.com, type: hysteria2, password: 896365e5-d2e6-4139-bc9d-37307c621200 }
-  - { name: 🇸🇬 新加坡专线02|BGP|流媒体, server: aws-linkhy10.liangxin1.xyz, port: 60000, ports: 60000-65530, mport: 60000-65530, udp: true, skip-cert-verify: true, sni: iosapps.itunes.apple.com, type: hysteria2, password: 896365e5-d2e6-4139-bc9d-37307c621200 }
-  - { name: 🇸🇬 新加坡专线03|BGP|流媒体, server: aws-linkhy11.liangxin1.xyz, port: 60000, ports: 60000-65530, mport: 60000-65530, udp: true, skip-cert-verify: true, sni: iosapps.itunes.apple.com, type: hysteria2, password: 896365e5-d2e6-4139-bc9d-37307c621200 }
-  - { name: 🇸🇬 新加坡专线04|BGP|流媒体, server: aws-linkhy12.liangxin1.xyz, port: 60000, ports: 60000-65530, mport: 60000-65530, udp: true, skip-cert-verify: true, sni: iosapps.itunes.apple.com, type: hysteria2, password: 896365e5-d2e6-4139-bc9d-37307c621200 }
-  - { name: 🇯🇵 日本专线01|BGP|流媒体, server: aws-linkhy15.liangxin1.xyz, port: 60000, ports: 60000-65530, mport: 60000-65530, udp: true, skip-cert-verify: true, sni: bilibili-jp.biliimg.com, type: hysteria2, password: 896365e5-d2e6-4139-bc9d-37307c621200 }
-  - { name: 🇯🇵 日本专线02|BGP|流媒体, server: aws-linkhy16.liangxin1.xyz, port: 60000, ports: 60000-65530, mport: 60000-65530, udp: true, skip-cert-verify: true, sni: bilibili-jp2.biliimg.com, type: hysteria2, password: 896365e5-d2e6-4139-bc9d-37307c621200 }
-  - { name: 🇯🇵 日本专线03|BGP|流媒体, server: aws-linkhy17.liangxin1.xyz, port: 60000, ports: 60000-65530, mport: 60000-65530, udp: true, skip-cert-verify: true, sni: bilibili-jp3.biliimg.com, type: hysteria2, password: 896365e5-d2e6-4139-bc9d-37307c621200 }
-  - { name: 🇯🇵 日本专线04|BGP|流媒体, server: aws-linkhy18.liangxin1.xyz, port: 60000, ports: 60000-65530, mport: 60000-65530, udp: true, skip-cert-verify: true, sni: bilibili-jp4.biliimg.com, type: hysteria2, password: 896365e5-d2e6-4139-bc9d-37307c621200 }
-  - { name: 🇰🇷 韩国专线01|BGP|流媒体, server: aws-linkhy21.liangxin1.xyz, port: 60000, ports: 60000-65530, mport: 60000-65530, udp: true, skip-cert-verify: true, sni: bilibili-kr.biliimg.com, type: hysteria2, password: 896365e5-d2e6-4139-bc9d-37307c621200 }
-  - { name: 🇹🇼 台湾专线01|BGP|流媒体, server: aws-linkhy22.liangxin1.xyz, port: 60000, ports: 60000-65530, mport: 60000-65530, udp: true, skip-cert-verify: true, sni: bilibili-tw.biliimg.com, type: hysteria2, password: 896365e5-d2e6-4139-bc9d-37307c621200 }
-  - { name: 🇬🇧 英国伦敦01|流媒体|0.1x, server: 203.57.82.107, port: 60000, ports: 60000-65530, mport: 60000-65530, udp: true, skip-cert-verify: true, sni: bilibili-gb.biliimg.com, type: hysteria2, password: 896365e5-d2e6-4139-bc9d-37307c621200 }
-  - { name: 🇬🇧 英国伦敦02|流媒体|0.1x, server: 203.57.82.107, port: 60000, ports: 60000-65530, mport: 60000-65530, udp: true, skip-cert-verify: true, sni: bilibili-gb.biliimg.com, type: hysteria2, password: 896365e5-d2e6-4139-bc9d-37307c621200 }
-  - { name: 🇺🇸 美国01|流媒体, server: 203.10.97.121, port: 60000, ports: 60000-65530, mport: 60000-65530, udp: true, skip-cert-verify: true, sni: www.apple.com, type: hysteria2, password: 896365e5-d2e6-4139-bc9d-37307c621200 }
+  - {name: 🇭🇰 香港 01, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20300, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇭🇰 香港 02, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20305, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇭🇰 香港 03, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20310, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇭🇰 香港 04, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20315, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇭🇰 香港 05, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20320, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇭🇰 香港 06, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20325, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇭🇰 香港 07, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20330, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇭🇰 香港 08, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20335, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇭🇰 香港 09, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20340, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇭🇰 香港 10, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20345, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇭🇰 香港 11, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20350, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇭🇰 香港 12, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20400, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇭🇰 香港 13, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20405, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇭🇰 香港 14, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20410, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇭🇰 香港 15, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20415, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇭🇰 香港 16, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20420, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇭🇰 香港 17, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20425, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇭🇰 香港 18, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20430, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇭🇰 香港 19, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20435, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇭🇰 香港 20, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20440, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇭🇰 香港 21, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20445, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇺🇸 美国 01, server: 1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs, port: 20100, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇺🇸 美国 02, server: 1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs, port: 20105, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇺🇸 美国 03, server: 1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs, port: 20110, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇺🇸 美国 04, server: 1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs, port: 20115, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇺🇸 美国 05, server: 1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs, port: 20120, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇺🇸 美国 06, server: 1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs, port: 20125, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇺🇸 美国 07, server: 1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs, port: 20130, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇺🇸 美国 08, server: 1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs, port: 20135, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇺🇸 美国 09, server: 1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs, port: 20140, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇺🇸 美国 10, server: 1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs, port: 20145, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇺🇸 美国 11, server: 1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs, port: 20150, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇺🇸 美国 12, server: 1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs, port: 20155, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇺🇸 美国 13, server: 1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs, port: 20160, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇯🇵 日本 01, server: 1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs, port: 20002, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇯🇵 日本 02, server: 1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs, port: 20005, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇯🇵 日本 03, server: 1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs, port: 20010, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇯🇵 日本 04, server: 1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs, port: 20015, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇯🇵 日本 05, server: 1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs, port: 20020, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇯🇵 日本 06, server: 1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs, port: 20025, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇯🇵 日本 07, server: 1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs, port: 20030, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇯🇵 日本 08, server: 1acd28c6-1658-4dbc-9c8a-ff3c75e993c8.skbi6uedh8.sbs, port: 20035, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇹🇼 台湾 01, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20355, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇹🇼 台湾 02, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20360, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇹🇼 台湾 03, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20365, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇹🇼 台湾 04, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20370, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇹🇼 台湾 05, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20375, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇹🇼 台湾 06, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20356, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇹🇼 台湾 07, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20361, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇹🇼 台湾 08, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20366, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇹🇼 台湾 09, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20371, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇹🇼 台湾 10, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20376, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇸🇬 新加坡 01, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20380, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇸🇬 新加坡 02, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20385, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇸🇬 新加坡 03, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20390, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
+  - {name: 🇸🇬 新加坡 04, server: 03c2226e-bf77-45ff-8acc-8996a8bbb186.ib8ktyn09d.sbs, port: 20395, type: anytls, password: a1nh65P6oI, sni: media-cdn1.ixiguavideo.com, alpn: [h2], client-fingerprint: chrome, idle-session-check-interval: 30, idle-session-timeout: 30, skip-cert-verify: true, udp: true, fast-open: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -272,7 +214,6 @@ proxy-groups:
       - 🇹🇼 台湾节点
       - 🇸🇬 狮城节点
       - 🇦 AmyTelecom
-      - 🇱 良心云
       - DIRECT
   - name: 🌍 国外媒体
     type: select
@@ -385,15 +326,6 @@ proxy-groups:
       - 🇭🇰 香港 19
       - 🇭🇰 香港 20
       - 🇭🇰 香港 21
-      - 🇭🇰 香港高速01|BGP|CMCU
-      - 🇭🇰 香港高速02|BGP|CMCU
-      - 🇭🇰 香港高速03|BGP|CMCU
-      - 🇭🇰 香港高速04|BGP|CMCU
-      - 🇭🇰 香港高速05|BGP|CMCU
-      - 🇭🇰 香港专线01|BGP|流媒体
-      - 🇭🇰 香港专线02|BGP|流媒体
-      - 🇭🇰 香港专线03|BGP|流媒体
-      - 🇭🇰 香港专线04|BGP|流媒体
   - name: 🇺🇲 美国节点
     type: url-test
     url: https://www.gstatic.com/generate_204
@@ -412,9 +344,6 @@ proxy-groups:
       - 🇺🇸 美国 11
       - 🇺🇸 美国 12
       - 🇺🇸 美国 13
-      - 🇺🇸 美国高速01|CTCU
-      - 🇺🇸 美国高速02|CTCU
-      - 🇺🇸 美国01|流媒体
   - name: 🇹🇼 台湾节点
     type: url-test
     url: https://www.gstatic.com/generate_204
@@ -430,8 +359,6 @@ proxy-groups:
       - 🇹🇼 台湾 08
       - 🇹🇼 台湾 09
       - 🇹🇼 台湾 10
-      - 🇹🇼 台湾高速01|BGP|流媒体
-      - 🇹🇼 台湾专线01|BGP|流媒体
   - name: 🇯🇵 日本节点
     type: url-test
     url: https://www.gstatic.com/generate_204
@@ -445,21 +372,6 @@ proxy-groups:
       - 🇯🇵 日本 06
       - 🇯🇵 日本 07
       - 🇯🇵 日本 08
-      - 🇯🇵 日本高速01|CTCU|0.5x
-      - 🇯🇵 日本高速02|CTCU|0.5x
-      - 🇯🇵 日本高速01|BGP|CUCM
-      - 🇯🇵 日本高速02|BGP|CUCM
-      - 🇯🇵 日本高速03|BGP|CUCM
-      - 🇯🇵 日本高速04|BGP|CUCM
-      - 🇯🇵 日本高速05|BGP|CUCM
-      - 🇯🇵 日本高速06|BGP|CTCU
-      - 🇯🇵 日本高速07|BGP|CTCU
-      - 🇯🇵 日本高速08|BGP|CTCU
-      - 🇯🇵 日本高速09|BGP|CTCU
-      - 🇯🇵 日本专线01|BGP|流媒体
-      - 🇯🇵 日本专线02|BGP|流媒体
-      - 🇯🇵 日本专线03|BGP|流媒体
-      - 🇯🇵 日本专线04|BGP|流媒体
   - name: 🇸🇬 狮城节点
     type: url-test
     url: https://www.gstatic.com/generate_204
@@ -469,18 +381,6 @@ proxy-groups:
       - 🇸🇬 新加坡 02
       - 🇸🇬 新加坡 03
       - 🇸🇬 新加坡 04
-      - 🇸🇬 新加坡高速01|BGP|CTCUCM
-      - 🇸🇬 新加坡高速02|BGP|CTCUCM
-      - 🇸🇬 新加坡高速03|BGP|CTCUCM
-      - 🇸🇬 新加坡高速04|BGP|CTCUCM
-      - 🇸🇬 新加坡高速05|BGP|CTCUCM
-      - 🇸🇬 新加坡高速06|BGP|CTCU
-      - 🇸🇬 新加坡高速07|BGP|CTCU
-      - 🇸🇬 新加坡高速08|BGP|CTCU
-      - 🇸🇬 新加坡专线01|BGP|流媒体
-      - 🇸🇬 新加坡专线02|BGP|流媒体
-      - 🇸🇬 新加坡专线03|BGP|流媒体
-      - 🇸🇬 新加坡专线04|BGP|流媒体
   - name: 🇦 AmyTelecom
     type: select
     proxies:
@@ -540,55 +440,6 @@ proxy-groups:
       - 🇸🇬 新加坡 02
       - 🇸🇬 新加坡 03
       - 🇸🇬 新加坡 04
-  - name: 🇱 良心云
-    type: select
-    proxies:
-      - 🇯🇵 日本高速01|CTCU|0.5x
-      - 🇯🇵 日本高速02|CTCU|0.5x
-      - 🇭🇰 香港高速01|BGP|CMCU
-      - 🇭🇰 香港高速02|BGP|CMCU
-      - 🇭🇰 香港高速03|BGP|CMCU
-      - 🇭🇰 香港高速04|BGP|CMCU
-      - 🇭🇰 香港高速05|BGP|CMCU
-      - 🇸🇬 新加坡高速01|BGP|CTCUCM
-      - 🇸🇬 新加坡高速02|BGP|CTCUCM
-      - 🇸🇬 新加坡高速03|BGP|CTCUCM
-      - 🇸🇬 新加坡高速04|BGP|CTCUCM
-      - 🇸🇬 新加坡高速05|BGP|CTCUCM
-      - 🇸🇬 新加坡高速06|BGP|CTCU
-      - 🇸🇬 新加坡高速07|BGP|CTCU
-      - 🇸🇬 新加坡高速08|BGP|CTCU
-      - 🇯🇵 日本高速01|BGP|CUCM
-      - 🇯🇵 日本高速02|BGP|CUCM
-      - 🇯🇵 日本高速03|BGP|CUCM
-      - 🇯🇵 日本高速04|BGP|CUCM
-      - 🇯🇵 日本高速05|BGP|CUCM
-      - 🇯🇵 日本高速06|BGP|CTCU
-      - 🇯🇵 日本高速07|BGP|CTCU
-      - 🇯🇵 日本高速08|BGP|CTCU
-      - 🇯🇵 日本高速09|BGP|CTCU
-      - 🇺🇸 美国高速01|CTCU
-      - 🇺🇸 美国高速02|CTCU
-      - 🇬🇧 英国伦敦|CTCU|0.1x
-      - 🇰🇷 韩国高速01|BGP|流媒体
-      - 🇹🇼 台湾高速01|BGP|流媒体
-      - 🇭🇰 香港专线01|BGP|流媒体
-      - 🇭🇰 香港专线02|BGP|流媒体
-      - 🇭🇰 香港专线03|BGP|流媒体
-      - 🇭🇰 香港专线04|BGP|流媒体
-      - 🇸🇬 新加坡专线01|BGP|流媒体
-      - 🇸🇬 新加坡专线02|BGP|流媒体
-      - 🇸🇬 新加坡专线03|BGP|流媒体
-      - 🇸🇬 新加坡专线04|BGP|流媒体
-      - 🇯🇵 日本专线01|BGP|流媒体
-      - 🇯🇵 日本专线02|BGP|流媒体
-      - 🇯🇵 日本专线03|BGP|流媒体
-      - 🇯🇵 日本专线04|BGP|流媒体
-      - 🇰🇷 韩国专线01|BGP|流媒体
-      - 🇹🇼 台湾专线01|BGP|流媒体
-      - 🇬🇧 英国伦敦01|流媒体|0.1x
-      - 🇬🇧 英国伦敦02|流媒体|0.1x
-      - 🇺🇸 美国01|流媒体
 rules:
   - DOMAIN-SUFFIX,tp.belle-vie.xyz,🇭🇰 香港节点
   - DOMAIN-SUFFIX,lulubar.net,🇭🇰 香港节点
